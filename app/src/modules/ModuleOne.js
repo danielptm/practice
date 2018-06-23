@@ -1,3 +1,4 @@
+// For problems 1, of https://projecteuler.net/progress
 const utils = {
 	sayHi: () => {
 		console.log('Hi from module');
