@@ -9,7 +9,7 @@ describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
 		result.includes(7);
 		result.includes(13);
 		result.includes(29);
-	
+
     });
     it('Find the largest number in an array.', () => {
 		const result = ModuleThree.getPrimeFactorsFromANumber(13195);
@@ -32,4 +32,3 @@ describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
     });
   });
 });
-	
