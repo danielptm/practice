@@ -1,13 +1,26 @@
 const utils = {
 	getPrimeFactorsFromANumber: (aNumber) => {
-		return primeFactors = [];
-		
+		const primes = [];
+		for(let i = 0; i < aNumber; i++){
+			if(aNumber % i === 0){
+				if(utils.determineIfNumberisPrime(i)){
+					primes.push(i);
+				}
+			}
+		}
+		return primes;
 	},
 	getLargestNumberFromArray: (numbersArray) => {
-		return -1;
+		return numbersArray.reduce((a, b) => Math.max(a, b));
 	},
-	determineIfANumberisPrime: (aNumber) => {
-		return 0;
+	determineIfNumberisPrime: (aNumber) => {
+		let isPrimeFlag = true;
+		for(let i = 0; i < aNumber; i++){
+			if(aNumber % i === 0 && (i !== aNumber && i !== 1 )){
+				isPrimeFlag = false;
+			}
+		}
+		return isPrimeFlag;
 	}
 }
 
