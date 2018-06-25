@@ -4,7 +4,7 @@
   "description": "A seed project for building a node project with tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register app/test/**.test.js",
+    "test": "mocha -s 0 --compilers js:babel-core/register app/test/**.test.js",
     "testmon": "nodemon mocha --compilers js:babel-core/register app/test/**.test.js"
   },
   "author": "Daniel",

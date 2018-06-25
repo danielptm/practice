@@ -4,7 +4,7 @@ import ModuleThree from '../src/modules/ModuleThree';
 describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
   describe('Problem 3 What is the largest prime factor of the number 600851475143 ?', () => {
     it('Get an array of prime factors of a certain number.', () => {
-		const result = ModuleThree.getPrimeFactorsFromANumber(13195);
+		const result = ModuleThree.getPrimeFactorsFromANumber(6008514);
 		result.includes(5);
 		result.includes(7);
 		result.includes(13);

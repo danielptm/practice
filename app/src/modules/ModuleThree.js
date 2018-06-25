@@ -15,8 +15,9 @@ const utils = {
 	},
 	determineIfNumberisPrime: (aNumber) => {
 		let isPrimeFlag = true;
-		for(let i = 0; i < aNumber; i++){
-			if(aNumber % i === 0 && (i !== aNumber && i !== 1 )){
+		let x = Math.sqrt(aNumber);
+		for(let i = 0; i < x; i++){
+			if(aNumber % i === 0 && (i !== x && i !== 1 )){
 				isPrimeFlag = false;
 			}
 		}
