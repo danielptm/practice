@@ -1,12 +1,14 @@
 const utils = {
 	getPrimeFactorsFromANumber: (aNumber) => {
 		const primes = [];
-		for(let i = 0; i < aNumber; i++){
-			if(aNumber % i === 0){
-				if(utils.determineIfNumberisPrime(i)){
-					primes.push(i);
+		const x = Math.sqrt(aNumber);
+		Math.floor(x);
+		for(let i = 1; i < x; i+=2){
+				if(aNumber % i === 0){
+					if(utils.determineIfNumberisPrime(i)){
+						primes.push(i);
+					}
 				}
-			}
 		}
 		return primes;
 	},
@@ -15,9 +17,8 @@ const utils = {
 	},
 	determineIfNumberisPrime: (aNumber) => {
 		let isPrimeFlag = true;
-		let x = Math.sqrt(aNumber);
-		for(let i = 0; i < x; i++){
-			if(aNumber % i === 0 && (i !== x && i !== 1 )){
+		for(let i = 0; i < aNumber; i++){
+			if(aNumber % i === 0 && (i !== aNumber && i !== 1 )){
 				isPrimeFlag = false;
 			}
 		}
