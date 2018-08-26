@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -s 0 --compilers js:babel-core/register app/test/**.test.js",
-    "testmon": "nodemon mocha --compilers js:babel-core/register app/test/**.test.js"
+    "testOne": "mocha -s 0 --compilers js:babel-core/register app/test/ProblemFive.test.js",
+    "testOneMon": "nodemon mocha --compilers js:babel-core/register app/test/ProblemFive.test.js",
+    "testmon": "nodemon --exec npm run babel-node mocha --compilers js:babel-core/register app/test/**.test.js"
   },
   "author": "Daniel",
   "license": "ISC",
@@ -14,7 +16,9 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.26.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
   }
 }
