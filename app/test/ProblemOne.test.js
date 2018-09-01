@@ -3,10 +3,6 @@ import ModuleOne from '../src/modules/ModuleOne'
 
 describe('Coding practice problems',() => {
   describe('Problems from the website projecteuler.net', () => {
-    it('Just checking stuff works', () => {
-		ModuleOne.sayHi();
-		ModuleOne.sayBye();
-    });
 	it('Problem 1, how many multiples of 3 and 5', () => {
 		const x = ModuleOne.getMultiplesOf3And5(10);
 		const y = ModuleOne.getMultiplesOf3And5(1000);

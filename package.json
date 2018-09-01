@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -s 0 --compilers js:babel-core/register app/test/**.test.js",
-    "testOne": "mocha -s 0 --compilers js:babel-core/register app/test/ProblemFive.test.js",
+    "testOne": "mocha -s 0 --compilers js:babel-core/register app/test/ProblemSix.test.js",
     "testOneMon": "nodemon mocha --compilers js:babel-core/register app/test/ProblemFive.test.js",
     "testmon": "nodemon --exec npm run babel-node mocha --compilers js:babel-core/register app/test/**.test.js"
   },

@@ -22,8 +22,6 @@ const ModuleFive = {
         } else {
             if (n % 2 === 1) {
                 n = (3 * n) + 1;
-
-                // numbers.push((3 * i) + 1);
             } else {
                 n = n / 2;
             }

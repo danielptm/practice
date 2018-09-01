@@ -1,8 +1,7 @@
 const assert = require('assert');
 import ModuleThree from '../src/modules/ModuleThree';
 
-describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
-  describe('Problem 3 What is the largest prime factor of the number 600851475143 ?', () => {
+describe('Problem 3 What is the largest prime factor of the number 600851475143 ?',() => {
     it('Get an array of prime factors of a certain number.', () => {
 		const result = ModuleThree.getPrimeFactorsFromANumber(13195);
 		result.includes(5);
@@ -13,10 +12,7 @@ describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
     });
     it('Find the largest number in an array. 13195 600851475143', () => {
 		const result = ModuleThree.getPrimeFactorsFromANumber(13195);
-    console.log(result);
 		const x = ModuleThree.getLargestNumberFromArray(result);
-		console.log('***** RESULT');
-		console.log(x);
 		assert.equal(x, 29);
     });
     // it('Determine if a number is a prime factor.', () => {
@@ -31,5 +27,4 @@ describe('Coding practice problems: https://projecteuler.net/problem=3',() => {
 		// assert.equal(false, d)
 		// assert.equal(false, e)
     // });
-  });
 });

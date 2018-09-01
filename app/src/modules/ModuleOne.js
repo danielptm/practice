@@ -1,11 +1,5 @@
 // For problems 1, of https://projecteuler.net/progress
 const utils = {
-	sayHi: () => {
-		console.log('Hi from module');
-	},
-	sayBye: () => {
-		console.log('Bye from module');
-	},
 	getMultiplesOf3And5: (upperLimit) => {
 		let sum = 0;
 		for(let i = 0; i < upperLimit; i++ ){
