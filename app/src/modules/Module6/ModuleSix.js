@@ -30,7 +30,18 @@ const ModuleSix = {
         return ModuleSix.blocks;
     },
     moveAOnToB: (a, b) => {
-        return 'hi';
+        // Mov a to the container of b and insert it to the right of it.
+        ModuleSix.blocks[b].splice(1, 0, ModuleSix.blocks[a].splice(0, 1)[0]);
+        // Get all numbers after the inserted number, and put them to their
+        // original positions
+        if(ModuleSix.blocks[b].length > 2) {
+            for (var i = 2; i <= ModuleSix.blocks[b].length; i++) {
+                console.log('count: ' + i);
+                const num = ModuleSix.blocks[b].splice(2, 1)[0];
+                console.log(num);
+                ModuleSix.blocks[num].unshift(num);
+            }
+        }
     },
     moveAOverB: (a, b) => {
 

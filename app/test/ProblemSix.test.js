@@ -1,9 +1,13 @@
 const assert = require('assert');
 import ModuleSix from '../src/modules/Module6/ModuleSix';
 
-describe('Problem six tests', () => {
-    it('#6', () => {
-        const commands = [
+describe('Robot arm tests:', () => {
+
+    let commands = [];
+    let blockStateException = [];
+
+    before(()=> {
+        commands = [
             'move 9 onto 1',
             'move 8 over 1',
             'move 7 over 1',
@@ -14,7 +18,7 @@ describe('Problem six tests', () => {
             'move 4 over 9',
             'quit'
         ];
-        const blockStateExpection = [
+        blockStateException = [
             '0: 0',
             '1: 1 9 2 4',
             '2:',
@@ -27,9 +31,28 @@ describe('Problem six tests', () => {
             '9:'
         ];
         ModuleSix.initializeBlocks(10);
-        const result = ModuleSix.interpretAndExecute(commands);
-        blockStateExpection.forEach((be, i) => {
-          assert.equal(blockStateExpection[i], result[i]);
-        })
-    })
+
+    });
+
+    // it('TEST: 0: 0', () => {
+    //     const result = ModuleSix.interpretAndExecute(commands);
+    //     assert.equal(blockStateException[0], result[0]);
+    // })
+
+    it('MoveAOnToB:', () => {
+        // assert.equal(JSON.stringify([2, 1]) === JSON.stringify(ModuleSix.blocks[2]), true);
+        ModuleSix.blocks[4] = [];
+        ModuleSix.blocks[1].push(4);
+        ModuleSix.blocks[5] = [];
+        ModuleSix.blocks[1].push(5);
+        ModuleSix.moveAOnToB(2, 1);
+        assert.equal( JSON.stringify([1,2]), JSON.stringify(ModuleSix.blocks[1]));
+    });
+
+    // it('MoveAOverB', () => {
+    //     // To set up some test to simulate, a 4 already having been moved
+    //
+    //     // console.log(ModuleSix.blocks);
+    // })
+
 })

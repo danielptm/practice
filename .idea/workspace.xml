@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc255f67-7c37-467f-8919-1c9f7e3dcac3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/modules/Module6/p101.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/test/ProblemSix.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/modules/Module5/ModuleFive.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/Module5/ModuleFive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/modules/ModuleFour.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/modules/ModuleOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/ModuleOne.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/ProblemFive.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ProblemFive.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/ProblemFour.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/ProblemOne.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ProblemOne.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/ProblemThree.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ProblemThree.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/modules/Module6/p101.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/Module6/p101.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/ProblemSix.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ProblemSix.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,14 +17,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.34108528">
+    <splitter split-orientation="horizontal" split-proportion="0.57768923">
       <split-first>
         <leaf>
           <file leaf-file-name="ProblemSix.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/test/ProblemSix.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+                <state relative-caret-position="680">
+                  <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -45,8 +36,8 @@
           <file leaf-file-name="ModuleSix.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="580">
+                  <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -59,6 +50,7 @@
     <findStrings>
       <find>console</find>
       <find>cons</find>
+      <find>conso</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,8 +68,8 @@
         <option value="$PROJECT_DIR$/app/test/ProblemOne.test.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemThree.test.js" />
         <option value="$PROJECT_DIR$/app/src/modules/Module6/Block.js" />
-        <option value="$PROJECT_DIR$/app/test/ProblemSix.test.js" />
         <option value="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" />
+        <option value="$PROJECT_DIR$/app/test/ProblemSix.test.js" />
       </list>
     </option>
   </component>
@@ -194,6 +186,27 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Robot arm tests:.MoveAOnToB:" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/app/test/ProblemSix.test.js</test-file>
+      <test-names>
+        <name value="Robot arm tests:" />
+        <name value="MoveAOnToB:" />
+      </test-names>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.Robot arm tests:.MoveAOnToB:" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -208,12 +221,17 @@
       <workItem from="1535212091337" duration="9401000" />
       <workItem from="1535386768775" duration="796000" />
       <workItem from="1535478855756" duration="21000" />
-      <workItem from="1535800210303" duration="4565000" />
+      <workItem from="1535800210303" duration="12640000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Robot_arm_tests__MoveAOnToB_ - 2018.09.01 at 16h 12m 23s.xml">
+      <configuration name="Robot arm tests:.MoveAOnToB:" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15016000" />
+    <option name="totallyTimeSpent" value="23091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -223,11 +241,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32983193" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.2912088" />
+      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.3870574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,17 +344,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/ProblemSix.test.js">
+    <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        <state relative-caret-position="580">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js">
+    <entry file="file://$PROJECT_DIR$/app/test/ProblemSix.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="680">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
         </state>
       </provider>
     </entry>
