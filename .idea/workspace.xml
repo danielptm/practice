@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc255f67-7c37-467f-8919-1c9f7e3dcac3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/modules/Module6/p101.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/Module6/p101.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test/ProblemSix.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ProblemSix.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/test/ArrayPractice.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,14 +18,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.57768923">
+    <splitter split-orientation="horizontal" split-proportion="0.68018866">
       <split-first>
         <leaf>
-          <file leaf-file-name="ProblemSix.test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/test/ProblemSix.test.js">
+          <file leaf-file-name="ArrayPractice.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="109" selection-start-line="3" selection-start-column="109" selection-end-line="3" selection-end-column="109" />
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
@@ -33,11 +46,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ModuleSix.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js">
+          <file leaf-file-name="ArrayPractice.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -63,13 +76,15 @@
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/app/test/ProblemFive.test.js" />
         <option value="$PROJECT_DIR$/app/src/modules/Module5/ModuleFive.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/src/modules/ModuleOne.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemOne.test.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemThree.test.js" />
         <option value="$PROJECT_DIR$/app/src/modules/Module6/Block.js" />
         <option value="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemSix.test.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" />
+        <option value="$PROJECT_DIR$/app/test/ArrayPractice.test.js" />
       </list>
     </option>
   </component>
@@ -138,14 +153,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="Module6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
@@ -221,7 +228,7 @@
       <workItem from="1535212091337" duration="9401000" />
       <workItem from="1535386768775" duration="796000" />
       <workItem from="1535478855756" duration="21000" />
-      <workItem from="1535800210303" duration="12640000" />
+      <workItem from="1535800210303" duration="14364000" />
     </task>
     <servers />
   </component>
@@ -231,7 +238,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23091000" />
+    <option name="totallyTimeSpent" value="24815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -245,7 +252,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.3870574" />
+      <window_info anchor="right" id="Terminal" order="3" weight="0.35286936" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,29 +313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/modules/ModuleFour.js" />
     <entry file="file://$PROJECT_DIR$/app/test/ProblemFour.test.js" />
-    <entry file="file://$PROJECT_DIR$/app/test/ProblemOne.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/modules/ModuleOne.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/ProblemFive.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/Block.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -346,15 +332,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="380">
+          <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/test/ProblemSix.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/ProblemFive.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/ProblemOne.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="109" selection-start-line="3" selection-start-column="109" selection-end-line="3" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
