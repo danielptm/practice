@@ -29,4 +29,12 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
     it('Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8', () =>{
         assert.equal('0-254-6-8', ArrayPractice.takeNumberReturnDashedString('025468'));
     })
+    it('Write a JavaScript program to sort the items of an array.', () =>{
+        // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ];
+        // Sample Output :
+        assert.equal('-4,-3,1,2,3,5,6,7,8', ArrayPractice.sortArray([ 3, 8, 7, 6, 5, -4, -3, 2, 1 ]));
+    })
+    it('Write a JavaScript program to find the most frequent item of an array.', () => {
+        assert.equal('a', ArrayPractice.findMostFrequentItem([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+    })
 });

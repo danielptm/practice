@@ -29,6 +29,23 @@ const ArrayPractice = {
             }
         }
         return returnString;
+    },
+    sortArray: (unsorted) => {
+        return unsorted.sort((a, b) => a - b).join(',');
+    },
+    findMostFrequentItem: (array) => {
+        const uniqueItems = [];
+        for (var i = 0; i < array.length; i++) {
+            const index = uniqueItems.find((item) => item.item === array[i]);
+            if(index != undefined){
+                // index contains a reference to the value in the array.
+                index.count++;
+            } else {
+                var newItem = {count: 0, item: array[i]};
+                uniqueItems.push(newItem);
+            }
+        }
+        return uniqueItems.sort((a, b) => a.count - b.count)[uniqueItems.length - 1].item;
     }
 }
 
