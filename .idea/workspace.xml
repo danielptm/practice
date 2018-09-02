@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc255f67-7c37-467f-8919-1c9f7e3dcac3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/test/ArrayPractice.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/ArrayPractice.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/test/ArrayPractice.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,26 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.68018866">
+    <splitter split-orientation="horizontal" split-proportion="0.4846293">
       <split-first>
         <leaf>
           <file leaf-file-name="ArrayPractice.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="109" selection-start-line="3" selection-start-column="109" selection-end-line="3" selection-end-column="109" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                <state relative-caret-position="415">
+                  <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -49,8 +35,8 @@
           <file leaf-file-name="ArrayPractice.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+                <state relative-caret-position="287">
+                  <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
@@ -83,8 +69,8 @@
         <option value="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemSix.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" />
         <option value="$PROJECT_DIR$/app/test/ArrayPractice.test.js" />
+        <option value="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" />
       </list>
     </option>
   </component>
@@ -153,6 +139,14 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ArrayPracticeModule" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
@@ -228,7 +222,7 @@
       <workItem from="1535212091337" duration="9401000" />
       <workItem from="1535386768775" duration="796000" />
       <workItem from="1535478855756" duration="21000" />
-      <workItem from="1535800210303" duration="14364000" />
+      <workItem from="1535800210303" duration="16964000" />
     </task>
     <servers />
   </component>
@@ -238,7 +232,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24815000" />
+    <option name="totallyTimeSpent" value="27415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -252,7 +246,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Terminal" order="3" weight="0.35286936" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.40441176" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -365,20 +359,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
+    <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="415">
+          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
+    <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="109" selection-start-line="3" selection-start-column="109" selection-end-line="3" selection-end-column="109" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="287">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
         </state>
       </provider>
     </entry>

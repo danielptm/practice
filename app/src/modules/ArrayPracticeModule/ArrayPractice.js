@@ -14,8 +14,21 @@ const ArrayPractice = {
     joinAllElementsInArray: (a) => {
         return a.join(' ');
     },
-    takeNumberReturnDashedString: () => {
-
+    takeNumberReturnDashedString: (numberAsString) => {
+        let returnString = '';
+        for(var i = 0; i < numberAsString.length; i++){
+            const n1 = Number(numberAsString.charAt(i));
+            if(returnString.length > 0) {
+                if((Number(returnString.charAt(returnString.length - 1)) % 2 === 0) && (n1 % 2 === 0)) {
+                    returnString += ('-' + n1);
+                } else {
+                    returnString += n1;
+                }
+            } else {
+                returnString += n1;
+            }
+        }
+        return returnString;
     }
 }
 

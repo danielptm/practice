@@ -27,6 +27,6 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
         assert.equal("Red Green White Black", ArrayPractice.joinAllElementsInArray(a));
     })
     it('Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8', () =>{
-
+        assert.equal('0-254-6-8', ArrayPractice.takeNumberReturnDashedString('025468'));
     })
 });
