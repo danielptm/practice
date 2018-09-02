@@ -37,4 +37,7 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
     it('Write a JavaScript program to find the most frequent item of an array.', () => {
         assert.equal('a', ArrayPractice.findMostFrequentItem([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
     })
+    it('Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input \'The Quick Brown Fox\' the output should be \'tHE qUICK bROWN fOX\'', () =>{
+        assert.equal('tHE qUICK bROWN fOX', ArrayPractice.reverseTextCase('The Quick Brown Fox'));
+    })
 });

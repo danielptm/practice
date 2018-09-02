@@ -1,3 +1,5 @@
+import ModuleSix from "../Module6/ModuleSix";
+
 const ArrayPractice = {
     isArray: (input) => {
         return Array.isArray(input);
@@ -46,6 +48,26 @@ const ArrayPractice = {
             }
         }
         return uniqueItems.sort((a, b) => a.count - b.count)[uniqueItems.length - 1].item;
+    },
+    reverseTextCase: (text) => {
+        let returnString = '';
+        for(var i = 0; i < text.length; i++){
+            let code = text.charCodeAt(i);
+            if(code === 32) {
+                returnString += String.fromCharCode(code);
+            }
+            else if(ArrayPractice.determineIfLowerCase(code)){
+                code += 32;
+                returnString += String.fromCharCode(code);
+            } else {
+                code -= 32;
+                returnString += String.fromCharCode(code);
+            }
+        }
+        return returnString;
+    },
+    determineIfLowerCase: (char) => {
+        return char > 64 && char < 90 ? true : false;
     }
 }
 
