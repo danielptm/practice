@@ -5,23 +5,23 @@ const ArrayPractice = {
         return Array.isArray(input);
     },
     cloneArray: (a) => {
-        return [... a];
+        return [...a];
     },
     getFirstItemOfArray: (a) => {
         return a[0];
     },
     getLastElementInArray: (a) => {
-        return a[a.length-1];
+        return a[a.length - 1];
     },
     joinAllElementsInArray: (a) => {
         return a.join(' ');
     },
     takeNumberReturnDashedString: (numberAsString) => {
         let returnString = '';
-        for(var i = 0; i < numberAsString.length; i++){
+        for (var i = 0; i < numberAsString.length; i++) {
             const n1 = Number(numberAsString.charAt(i));
-            if(returnString.length > 0) {
-                if((Number(returnString.charAt(returnString.length - 1)) % 2 === 0) && (n1 % 2 === 0)) {
+            if (returnString.length > 0) {
+                if ((Number(returnString.charAt(returnString.length - 1)) % 2 === 0) && (n1 % 2 === 0)) {
                     returnString += ('-' + n1);
                 } else {
                     returnString += n1;
@@ -39,7 +39,7 @@ const ArrayPractice = {
         const uniqueItems = [];
         for (var i = 0; i < array.length; i++) {
             const index = uniqueItems.find((item) => item.item === array[i]);
-            if(index != undefined){
+            if (index != undefined) {
                 // index contains a reference to the value in the array.
                 index.count++;
             } else {
@@ -51,12 +51,12 @@ const ArrayPractice = {
     },
     reverseTextCase: (text) => {
         let returnString = '';
-        for(var i = 0; i < text.length; i++){
+        for (var i = 0; i < text.length; i++) {
             let code = text.charCodeAt(i);
-            if(code === 32) {
+            if (code === 32) {
                 returnString += String.fromCharCode(code);
             }
-            else if(ArrayPractice.determineIfLowerCase(code)){
+            else if (ArrayPractice.determineIfLowerCase(code)) {
                 code += 32;
                 returnString += String.fromCharCode(code);
             } else {
@@ -68,7 +68,16 @@ const ArrayPractice = {
     },
     determineIfLowerCase: (char) => {
         return char > 64 && char < 90 ? true : false;
+    },
+    printElementsOfArray: (array) => {
+        for(var i = 0; i < array.length; i++){
+            console.log('row ' + i);
+            for(var j = 0; j < array[j].length; j++){
+                console.log(array[i][j]);
+            }
+        }
     }
+
 }
 
 export default ArrayPractice;
