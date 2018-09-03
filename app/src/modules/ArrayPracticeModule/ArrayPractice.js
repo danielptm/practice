@@ -76,6 +76,9 @@ const ArrayPractice = {
                 console.log(array[i][j]);
             }
         }
+    },
+    squareAllItemsInVector: (array) => {
+        return array.reduce((accum, num) =>  accum + Math.pow(num, 2), 0);
     }
 
 }

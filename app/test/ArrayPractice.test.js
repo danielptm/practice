@@ -51,6 +51,9 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
         // " 24"
         // "row 1"
         var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
-        ArrayPractice.printElementsOfArray(a);
+        // ArrayPractice.printElementsOfArray(a);
+    })
+    it('Write a JavaScript program to find the sum of squares of a numeric vector', () =>{
+        assert.equal(56, ArrayPractice.squareAllItemsInVector([2,4,6]));
     })
 });

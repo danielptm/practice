@@ -22,8 +22,8 @@
           <file leaf-file-name="ArrayPractice.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-212">
-                  <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="109" />
+                <state relative-caret-position="740">
+                  <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-end-line="54" />
                 </state>
               </provider>
             </entry>
@@ -35,8 +35,8 @@
           <file leaf-file-name="ArrayPractice.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="463">
-                  <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+                <state relative-caret-position="725">
+                  <caret line="79" selection-start-line="79" selection-end-line="79" />
                 </state>
               </provider>
             </entry>
@@ -69,8 +69,8 @@
         <option value="$PROJECT_DIR$/app/src/modules/Module6/ModuleSix.js" />
         <option value="$PROJECT_DIR$/app/test/ProblemSix.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/test/ArrayPractice.test.js" />
         <option value="$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js" />
+        <option value="$PROJECT_DIR$/app/test/ArrayPractice.test.js" />
       </list>
     </option>
   </component>
@@ -222,7 +222,7 @@
       <workItem from="1535212091337" duration="9401000" />
       <workItem from="1535386768775" duration="796000" />
       <workItem from="1535478855756" duration="21000" />
-      <workItem from="1535800210303" duration="23804000" />
+      <workItem from="1535800210303" duration="26451000" />
     </task>
     <servers />
   </component>
@@ -232,7 +232,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34255000" />
+    <option name="totallyTimeSpent" value="36902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -246,7 +246,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25945377" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.63235295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,15 +361,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/test/ArrayPractice.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="109" />
+        <state relative-caret-position="740">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-end-line="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/modules/ArrayPracticeModule/ArrayPractice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        <state relative-caret-position="725">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
