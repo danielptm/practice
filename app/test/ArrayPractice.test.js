@@ -56,4 +56,8 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
     it('Write a JavaScript program to find the sum of squares of a numeric vector', () =>{
         assert.equal(56, ArrayPractice.squareAllItemsInVector([2,4,6]));
     })
+    it('Write a JavaScript program to compute the sum and product of an array of integers.', () =>{
+        assert.equal(400, ArrayPractice.calculateSumAndProductOfArray([10,40]).product);
+        assert.equal(50, ArrayPractice.calculateSumAndProductOfArray([10,40]).sum);
+    })
 });

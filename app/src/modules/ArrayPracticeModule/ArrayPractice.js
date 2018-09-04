@@ -79,8 +79,13 @@ const ArrayPractice = {
     },
     squareAllItemsInVector: (array) => {
         return array.reduce((accum, num) =>  accum + Math.pow(num, 2), 0);
+    },
+    calculateSumAndProductOfArray: (array) => {
+        const sumAndProduct = {product: 1, sum: 0}
+        sumAndProduct.sum = array.reduce((accum, num) => accum + num, sumAndProduct.sum);
+        sumAndProduct.product = array.reduce((accum, num) => accum * num, sumAndProduct.product);
+        return sumAndProduct;
     }
-
 }
 
 export default ArrayPractice;
