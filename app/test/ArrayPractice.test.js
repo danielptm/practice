@@ -60,4 +60,8 @@ describe('Javascript practice. https://www.w3resource.com/javascript-exercises/j
         assert.equal(400, ArrayPractice.calculateSumAndProductOfArray([10,40]).product);
         assert.equal(50, ArrayPractice.calculateSumAndProductOfArray([10,40]).sum);
     })
+    it('Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).', () =>{
+        const items = [2, 2, 'zzz', '1', 'ABC', 'abc'];
+        assert.equal(JSON.stringify([2, 'zzz', '1', 'abc']), ArrayPractice.removeDuplicateItems(items));
+    })
 });

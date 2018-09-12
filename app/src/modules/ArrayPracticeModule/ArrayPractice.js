@@ -85,7 +85,20 @@ const ArrayPractice = {
         sumAndProduct.sum = array.reduce((accum, num) => accum + num, sumAndProduct.sum);
         sumAndProduct.product = array.reduce((accum, num) => accum * num, sumAndProduct.product);
         return sumAndProduct;
+    },
+    removeDuplicateItems: (array) => {
+        let newArray = [];
+        array.forEach((item) => {
+            if(typeof item === 'string') {
+                item = item.toLowerCase();
+            }
+           if(!newArray.includes(item)){
+               newArray.push(item);
+           }
+        });
+        return JSON.stringify(newArray);
     }
+
 }
 
 export default ArrayPractice;
