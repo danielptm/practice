@@ -1,5 +1,7 @@
 package practice;
 
+import help.NumberCompare;
+
 import java.util.*;
 
 /**
@@ -21,10 +23,58 @@ public class Collection {
         }
     }
 
-    public static void seeHashSet(){
-        Set<String> items = new HashSet<>();
-        items.add("hi");
-        items.add("bye");
+    public static List<String> createNewArrayList(){
+        List<String> items = new ArrayList<>();
+        items.add("yellow");
+        items.add("blue");
+        items.add("red");
+        return items;
+    }
+
+    public static List<String> insertItemInArray(){
+        List<String> list = new ArrayList<>();
+        list.add("hello");
+        list.add("bye");
+        list.add("ciao");
+        list.add(0, "inserted");
+        return list;
+    }
+
+    public static List<String> insertItemAtGivenPointInArrayList(int index, String item){
+        List<String> items = createNewArrayList();
+        items.add(index, item);
+        return items;
+    }
+
+    public static List<String> updateElementInArrayAtCertainIndex(int index, String item){
+        List<String> items = createNewArrayList();
+        items.set(index, item);
+        return items;
+    }
+
+    public static List<Integer> createArrayOfUnorderedNumbers(){
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(1);
+        numbers.add(2);
+        return numbers;
+    }
+
+    public static boolean findElementInArrayList(String item){
+        return createNewArrayList().contains(item);
+    }
+
+    public static List<Integer> sortArrayList(){
+        List<Integer> numbers = createArrayOfUnorderedNumbers();
+        numbers.sort(new NumberCompare());
+        return numbers;
+    }
+
+    public static List<Integer> sortArrayListInEasierWay(){
+        List<Integer> items = createArrayOfUnorderedNumbers();
+        Collections.sort(items);
+        return items;
+
     }
 
 }
