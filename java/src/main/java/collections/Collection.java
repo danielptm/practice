@@ -1,4 +1,4 @@
-package practice;
+package collections;
 
 import help.NumberCompare;
 

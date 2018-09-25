@@ -2,13 +2,11 @@ package practice;
 
 import static org.junit.Assert.assertTrue;
 
+import collections.Collection;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Unit test for simple Collection.
@@ -106,4 +104,88 @@ public class CollectionTest
     }
 
 
+    /**
+     * Choose/create a collection that is suitable for not accepting duplicates in its structure and where order is not important.
+     */
+    @Test
+    public void set(){
+        Set<String> items = new HashSet<>();
+        items.add("cat");
+        items.add("dog");
+        items.add("alligator");
+        items.add("cat");
+        System.out.println(items);
+
+    }
+
+    /**
+     * Choose/create a collection that does not accept duplicates but is sorted.
+     *
+     * This is a simple example with strings but if using objects, then the object
+     * has to implement the comparator interface so the tree set can sort it otherwise an exception will
+     * be thrown.
+     *
+     */
+    @Test
+    public void treeSet(){
+        Set<String> items = new TreeSet<>();
+        items.add("cat");
+        items.add("dog");
+        items.add("alligator");
+        items.add("cat");
+        System.out.println(items);
+    }
+
+    /**
+     * Choose/create a collection that does not accept duplicates but maintains insertion order
+     */
+    @Test
+    public void linkedHashSet(){
+        Set<String> items = new LinkedHashSet<>();
+        items.add("cat");
+        items.add("dog");
+        items.add("alligator");
+        items.add("cat");
+        System.out.println(items);
+    }
+
+    /**
+     * Create choose a data structure that maintains key value pairs where order is not important.
+     */
+    @Test
+    public void hashMap(){
+        Map<String, String> items = new HashMap<>();
+        items.put("greeting", "hi");
+        items.put("farewell", "bye");
+        items.put("animal", "cat");
+        System.out.println(items);
+        System.out.println(items.get("animal"));
+    }
+
+    /**
+     * Create/choose a data structure that maintains key value pairs but stores the items in order they were inserted.
+     */
+    @Test
+    public void linkedHashMap(){
+        Map<String, String> items = new LinkedHashMap<>();
+        items.put("greeting", "hi");
+        items.put("farewell", "bye");
+        items.put("animal", "cat");
+        System.out.println(items);
+    }
+
+    /**
+     * Create/choose a data structure that maintains key value pairs but is sorted by the keys.
+     *
+     * Like treeSet the class has to implement comparable if it is a java object and not somthing that has
+     * natural order such as an Integer or String
+     */
+    @Test
+    public void treeMap(){
+        Map<String, String> items = new TreeMap<>();
+        items.put("greeting", "hi");
+        items.put("farewell", "bye");
+        items.put("animal", "cat");
+        System.out.println(items);
+    }
 }
