@@ -175,10 +175,17 @@ public class CollectionTest
     }
 
     /**
-     * Create/choose a data structure that maintains key value pairs but is sorted by the keys.
+     * Tree map excercizes:
      *
-     * Like treeSet the class has to implement comparable if it is a java object and not somthing that has
-     * natural order such as an Integer or String
+     * What is a tree map? Why use it?
+     * Because it implements the map interface it is a collection with key value pairs.
+     * It is a good choice to use if you want the contents of the treemap to be sorted by their keys.
+     * If the keys are objects that do not have a natural order, then the class of the object
+     * must implement comparator in order to define an order.
+     */
+
+    /**
+     * Create/choose a data structure that maintains key value pairs but is sorted by the keys.
      */
     @Test
     public void treeMap(){
@@ -188,4 +195,74 @@ public class CollectionTest
         items.put("animal", "cat");
         System.out.println(items);
     }
+
+    /**
+     * Write a Java program to associate the specified value with the specified key in a Tree Map
+     */
+    @Test
+    public void associateTreeMap(){
+        Map<Integer, String> items = new TreeMap<>();
+        items.put(1, "hi");
+        items.put(2, "hi2");
+        items.put(3, "hi3");
+        items.forEach((item, item2) -> {
+            System.out.println(item.toString() + "=>" + item2);
+        });
+    }
+
+    /**
+     * Write a Java program to copy a Tree Map content to another Tree Map.
+     */
+    @Test
+    public void copyTreeMapContentToOtherTreeMap(){
+        Map<Integer, String> items = new TreeMap<>();
+        items.put(1, "hi");
+        items.put(2, "hi2");
+        items.put(3, "hi3");
+        Map<Integer, String> items2 = new TreeMap<>();
+        items2.putAll(items);
+        System.out.println(items2);
+    }
+
+    /**
+     * Write a Java program to search a key in a Tree Map.
+     */
+    @Test
+    public void searchForKeyInTreemap(){
+        Map<Integer, String> items = new TreeMap<>();
+        items.put(1, "hi");
+        items.put(2, "hi2");
+        items.put(3, "hi3");
+
+        System.out.println(items.containsKey(1));
+    }
+
+    /**
+     * Write a Java program to search a value in a Tree Map.
+     */
+    @Test
+    public void searchValueInTreeMap(){
+        Map<Integer, String> items = new TreeMap<>();
+        items.put(1, "hi");
+        items.put(2, "hi2");
+        items.put(3, "hi3");
+
+        System.out.println(items.containsValue("hi"));
+    }
+
+    /**
+     * Write a Java program to get all keys from the given a Tree Map.
+     */
+    @Test
+    public void writeProgramToGetAllKeysFromTreeMap(){
+        Map<Integer, String> items = new TreeMap<>();
+        items.put(1, "hi");
+
+        items.put(3234, "hi3");
+        items.put(2, "hi2");
+        items.put(3, "hi3");
+        System.out.println(items.keySet());
+    }
+
+
 }
