@@ -41,5 +41,42 @@ public class StringPracticeTest {
                 .equals(StringPractice.putStringInsideOtherString("<<>>", "Yay")));
     }
 
+    @Test
+    public void testStripZeros(){
+        String string1 = "023401";
+        String string2 = "0023401";
+        String string3 = "00023401";
+        String string4 = "000023401";
+        String formatted1 = StringPractice.stripZeros(string1);
+        String formatted2 = StringPractice.stripZeros(string2);
+        String formatted3 = StringPractice.stripZeros(string3);
+        String formatted4 = StringPractice.stripZeros(string4);
+        Assert.assertEquals(formatted1, "23401");
+        Assert.assertEquals(formatted2, "23401");
+        Assert.assertEquals(formatted3, "23401");
+        Assert.assertEquals(formatted4, "23401");
+    }
 
+    @Test
+    public void testEPId(){
+        String string1 = "NULL";
+        String string2 = "900012312312";
+        String string3 = "2345";
+
+        Assert.assertEquals("NULL", StringPractice.calculateEPId(string1));
+        Assert.assertEquals("NULL", StringPractice.calculateEPId(string2));
+        Assert.assertEquals("2345", StringPractice.calculateEPId(string3));
+
+    }
+
+    @Test
+    public void testPId(){
+        String string1 = "NULL";
+        String string2 = "9000123";
+        String string3 = "123412312";
+
+        Assert.assertEquals("NULL", StringPractice.calculatePId(string1));
+        Assert.assertEquals("9000123", StringPractice.calculatePId(string2));
+        Assert.assertEquals("NULL", StringPractice.calculatePId(string3));
+    }
 }
