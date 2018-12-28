@@ -98,7 +98,6 @@ const ArrayPractice = {
         });
         return JSON.stringify(newArray);
     }
-
 }
 
 export default ArrayPractice;
