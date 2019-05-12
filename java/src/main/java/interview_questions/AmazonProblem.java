@@ -70,8 +70,10 @@ public class AmazonProblem {
             for(int j = 0; j < packages.size(); j++) {
                 int spaceTakenByPackages = packages.get(i).getSpaceUnits() + packages.get(j).getSpaceUnits();
                 if (spaceTakenByPackages == actualTruckSpace) {
-                    idsOfChosenPackages.add(packages.get(i).getId());
-                    idsOfChosenPackages.add(packages.get(j).getId());
+                    if(idsOfChosenPackages.size() == 0) {
+                        idsOfChosenPackages.add(packages.get(i).getId());
+                        idsOfChosenPackages.add(packages.get(j).getId());
+                    }
                 }
             }
         }
