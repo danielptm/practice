@@ -35,11 +35,11 @@ public class AmazonProblemTest {
         List<Integer> items2 = AmazonProblem.IDsOfPackages(truckSpace2, packageSpaces2);
 
 
-//        Assert.assertEquals(0, items.get(0).intValue());
-//        Assert.assertEquals(4, items.get(1).intValue());
+        Assert.assertEquals(0, items.get(0).intValue());
+        Assert.assertEquals(4, items.get(1).intValue());
 
-        Assert.assertEquals(1, items2.get(0).intValue());
-        Assert.assertEquals(2, items2.get(1).intValue());
+//        Assert.assertEquals(1, items2.get(0).intValue());
+//        Assert.assertEquals(2, items2.get(1).intValue());
 
 
     }
