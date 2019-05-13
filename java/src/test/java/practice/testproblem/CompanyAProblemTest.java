@@ -1,13 +1,13 @@
 package practice.testproblem;
 
-import interview_questions.CompanyProblem;
+import interview_questions.ACompanyProblem;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompanyProblemTest {
+public class CompanyAProblemTest {
 
     @Test
     public void testProblem() {
@@ -30,9 +30,9 @@ public class CompanyProblemTest {
             packageSpaces2.add(packageSpace2[i]);
         }
 
-        List<Integer> items = CompanyProblem.IDsOfPackages(truckSpace1, packageSpaces1);
+        List<Integer> items = ACompanyProblem.IDsOfPackages(truckSpace1, packageSpaces1);
 
-        List<Integer> items2 = CompanyProblem.IDsOfPackages(truckSpace2, packageSpaces2);
+        List<Integer> items2 = ACompanyProblem.IDsOfPackages(truckSpace2, packageSpaces2);
 
 
         Assert.assertEquals(0, items.get(0).intValue());

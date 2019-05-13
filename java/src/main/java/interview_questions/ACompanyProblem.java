@@ -48,7 +48,7 @@ class Package {
     }
 }
 
-public class CompanyProblem {
+public class ACompanyProblem {
 
 
     /**
@@ -90,7 +90,6 @@ public class CompanyProblem {
                             largestPackageId = packages.get(j).getId();
                         }
                     }
-
                 }
             }
         }
