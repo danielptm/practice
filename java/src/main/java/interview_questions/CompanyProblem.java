@@ -7,6 +7,7 @@ class Package {
     boolean pickedUp;
     int id;
     int spaceUnits;
+    int partnerId;
 
     public Package(int id, int spaceUnits) {
         this.spaceUnits = spaceUnits;
@@ -37,9 +38,17 @@ class Package {
     public void setSpaceUnits(int spaceUnits) {
         this.spaceUnits = spaceUnits;
     }
+
+    public int getPartnerId() {
+        return partnerId;
+    }
+
+    public void setPartnerId(int partnerId) {
+        this.partnerId = partnerId;
+    }
 }
 
-public class AmazonProblem {
+public class CompanyProblem {
 
 
     /**
@@ -54,6 +63,7 @@ public class AmazonProblem {
     public static ArrayList<Integer> IDsOfPackages(int truckSpace,
                                      ArrayList<Integer> packagesSpace)
     {
+        int largestPackageId = 0;
         int actualTruckSpace = truckSpace - 30;
         ArrayList<Integer> idsOfChosenPackages = new ArrayList<>(2);
 
@@ -71,12 +81,25 @@ public class AmazonProblem {
                 int spaceTakenByPackages = packages.get(i).getSpaceUnits() + packages.get(j).getSpaceUnits();
                 if (spaceTakenByPackages == actualTruckSpace) {
                     if(idsOfChosenPackages.size() == 0) {
-                        idsOfChosenPackages.add(packages.get(i).getId());
-                        idsOfChosenPackages.add(packages.get(j).getId());
+                        packages.get(i).setPartnerId(packages.get(j).getId());
+                        packages.get(j).setPartnerId(packages.get(i).getId());
+                        if(packages.get(i).getSpaceUnits() > packages.get(largestPackageId).getSpaceUnits()) {
+                            largestPackageId = packages.get(i).getId();
+                        }
+                        if(packages.get(j).getSpaceUnits() > packages.get(largestPackageId).getSpaceUnits()) {
+                            largestPackageId = packages.get(j).getId();
+                        }
                     }
+
                 }
             }
         }
+
+        int largestChosenPackageId = packages.get(largestPackageId).getId();
+        int partnerPackageId = packages.get(largestPackageId).getPartnerId();
+
+        idsOfChosenPackages.add(partnerPackageId);
+        idsOfChosenPackages.add(largestChosenPackageId);
 
         return idsOfChosenPackages;
     }
