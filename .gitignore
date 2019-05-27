@@ -1,4 +1,5 @@
 node_modules
 target
 *.iml
-.idea
+java/.idea
+javascript/.idea
