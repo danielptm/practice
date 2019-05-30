@@ -1,5 +1,7 @@
 package practice.leetcode;
 
+import java.util.StringJoiner;
+
 public class LeetCode {
 
 
@@ -18,12 +20,36 @@ public class LeetCode {
                 if (nums[i] + nums[j] == target) {
                     intsToReturn[0] = j;
                     intsToReturn[1] = i;
+                    break;
                 }
             }
         }
-        if (intsToReturn[0] == -1 && intsToReturn[1] == -1) {
+        if (intsToReturn[0] == -1 || intsToReturn[1] == -1) {
             throw new IllegalArgumentException("It is not possible to sum elements in the array to equal the target.");
         }
         return intsToReturn;
+    }
+
+    /**
+     * Given a 32-bit signed integer, reverse digits of an integer.
+     * @param x
+     * @return
+     */
+    public static int reverse(int x) {
+        String parsedInt = String.valueOf(x);
+        String sj = "";
+
+        for(int i = (parsedInt.length() - 1); i >= 0; i--) {
+            try {
+                int number = Integer.valueOf(String.valueOf(parsedInt.charAt(i)));
+                sj += String.valueOf(number);
+            } catch(NumberFormatException e) {
+                char charAt = parsedInt.charAt(i);
+                String newString = String.valueOf(charAt) + sj.toString();
+                sj = "";
+                sj += newString;
+            }
+        }
+        return Integer.valueOf(sj.toString());
     }
 }
