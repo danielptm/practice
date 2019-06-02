@@ -20,4 +20,9 @@ public class CreatingAndDestroyingObjectsTest {
     public void testBuilder() {
         CreatingAndDestroyingObjects.builderPatternExample();
     }
+
+    @Test
+    public void testSingleton() {
+        CreatingAndDestroyingObjects.enforceSingleTonPropertyExample();
+    }
 }

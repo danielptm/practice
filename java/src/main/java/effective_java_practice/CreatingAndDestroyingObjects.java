@@ -1,7 +1,7 @@
 package effective_java_practice;
 
-import effective_java_practice.model.Pizza;
-import effective_java_practice.model.Timespan;
+import effective_java_practice.model.*;
+import sun.jvm.hotspot.utilities.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,5 +45,39 @@ public class CreatingAndDestroyingObjects {
     public static void builderPatternExample() {
         Pizza pizza =  new Pizza.Builder("NORMAL", "RED").withMushrooms("NORMAL").build();
         System.out.println(pizza.getMushrooms());
+    }
+
+    /**
+     * Use a singleton when you need 1 and only 1 instance of an object.
+     *
+     * Notes:
+     * There are 3 ways recommended by Josh Bloch.
+     * In all cases Josh Bloch does not recommend lazy loading a singleton.
+     *
+     * The 3 ways to implement a singleton are like this:
+     * <ul>
+     *     Create singleton and access with the instance itself as a public member.
+     *     Make the instance itself private and get it with a public getter.
+     *     Use an enum to get the instance. (Best way according to him)
+     * </ul>
+     */
+    public static void enforceSingleTonPropertyExample() {
+        MySingleton1 mySingleton1 = MySingleton1.MY_SINGLETON_1;
+        MySingleton1 mySingleton1a = MySingleton1.MY_SINGLETON_1;
+
+        MySingleton2 mySingleton2 =  MySingleton2.getInstance();
+        MySingleton2 mySingleton2a =  MySingleton2.getInstance();
+
+        MySingleton3 mySingleton3 = MySingleton3.INSTANCE;
+        MySingleton3 mySingleton3a = MySingleton3.INSTANCE;
+
+        System.out.println("Should be true: " + (mySingleton1 == mySingleton1a));
+        System.out.println("Should be true: " + (mySingleton2 == mySingleton2a));
+        System.out.println("Should be true: " + (mySingleton3 == mySingleton3a));
+        System.out.print("Say ");
+        mySingleton1.sayHi();
+        System.out.print("Say ");
+        mySingleton3.INSTANCE.sayHi();
+
     }
 }
