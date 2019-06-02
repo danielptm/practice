@@ -15,4 +15,9 @@ public class CreatingAndDestroyingObjectsTest {
         List<Timespan> timespanList = creatingAndDestroyingObjects.staticFactoryMethodExample();
         Assert.assertEquals(timespanList.get(0).getEndTime(), timespanList.get(1).getEndTime());
     }
+
+    @Test
+    public void testBuilder() {
+        CreatingAndDestroyingObjects.builderPatternExample();
+    }
 }
