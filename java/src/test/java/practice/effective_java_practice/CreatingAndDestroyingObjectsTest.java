@@ -25,4 +25,9 @@ public class CreatingAndDestroyingObjectsTest {
     public void testSingleton() {
         CreatingAndDestroyingObjects.enforceSingleTonPropertyExample();
     }
+
+    @Test
+    public void testNonInstantiability() {
+        CreatingAndDestroyingObjects.enforceNonInstantiability();
+    }
 }

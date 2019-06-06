@@ -80,4 +80,18 @@ public class CreatingAndDestroyingObjects {
         mySingleton3.INSTANCE.sayHi();
 
     }
+
+    /**
+     * Enforce non instantiability with a private constructor when you want to make a class non
+     * instantiable.
+     *
+     * Notes:
+     * Noninstantiability may be desired when grouping utility methods together or  creating a
+     * factory or some other reason when you dont want to create objects of the class.
+     * The private constructor can throw an assertion error to ensure that an object of itself is not created
+     * inside the class also prevent class from being subclassed.
+     */
+    public static void enforceNonInstantiability () {
+        NonInstantiable.sayHi();
+    }
 }
