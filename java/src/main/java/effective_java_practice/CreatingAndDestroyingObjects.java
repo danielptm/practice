@@ -1,10 +1,13 @@
 package effective_java_practice;
 
 import effective_java_practice.model.*;
-import sun.jvm.hotspot.utilities.Assert;
+import effective_java_practice.model.dictionary.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Supplier;
 
 public class CreatingAndDestroyingObjects {
 
@@ -93,5 +96,34 @@ public class CreatingAndDestroyingObjects {
      */
     public static void enforceNonInstantiability () {
         NonInstantiable.sayHi();
+    }
+
+    /**
+     * Prefer dependency injection to hard wiring resources.
+     * Why?
+     * Hard wiring resources assumes that the class will only every care about that resource which is not flexible.
+     * It makes it difficult to test.
+     *
+     * Notes:
+     * A simple way is to inject dependencies in contructor.
+     * Consider injecting resource factories if you need to create similar but different types of a resource.
+     * Consider using a Supplier<T> as a resource factory
+     * Consider using a dependency injection framework such as spring if you need many dependencies injected in order
+     * to avoid unwieldly constructors.
+     */
+    public static void preferDependencyInejction() {
+        Map<String, String> swedishDict = new HashMap<>();
+        Map<String, String> spanishDict = new HashMap<>();
+
+
+        //Basic dependency injection.
+        SwedishDictionary dictionary = new SwedishDictionary(swedishDict);
+        SpellChecker spellChecker = new SpellChecker(dictionary);
+
+
+        //Possible way to use a Supplier as a factory and pass it to SpellChecker.
+        Supplier<? extends Dictionary> supplier = () -> Math.random() > .50 ? new SwedishDictionary(swedishDict) : new SpanishDictionary(spanishDict);
+        SpellChecker spellChecker1 = new SpellChecker(supplier);
+
     }
 }
