@@ -8,8 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
+import java.util.regex.Pattern;
 
 public class CreatingAndDestroyingObjects {
+
+    private static final Pattern ROMAN = Pattern.compile(
+            "^(?=.)M*(C[MD]|D?C{0,3})"
+                    + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$");
 
     /**
      * Static factory methods, Use them if:
@@ -124,6 +129,40 @@ public class CreatingAndDestroyingObjects {
         //Possible way to use a Supplier as a factory and pass it to SpellChecker.
         Supplier<? extends Dictionary> supplier = () -> Math.random() > .50 ? new SwedishDictionary(swedishDict) : new SpanishDictionary(spanishDict);
         SpellChecker spellChecker1 = new SpellChecker(supplier);
+
+    }
+
+    /**
+     * Avoid unnecessary object creation because you can obliterate your memory for no good reason.
+     *
+     * Notes:
+     * Using static factory methods opposed to constructors helps to avoid unnecessary object creation.
+     * Reuse immutable objects and objects you know wont be modified.
+     * If an object is expensive to create such as a Pattern or a Database connection the consider using a cached instance.
+     * While it is harmless to do so, has no benefit, don't call keyset on a Map instance multiple times.
+     * Avoid autoboxing, especially in loops, use primitives opposed to Objects whenever possible.
+     * Avoid using an object pool unless the objects are very expensive to create. (Example DB connection)
+     * Still avoid object pools because modern JVM garbage collection would probably outperfrom it anyway and those things can destructure code.
+     */
+    public static void avoidUnnecessaryObjectCreation() {
+        //Do not do this!
+        //While in itself it is harmless, if this were part of a loop it would create new String objects
+        //every time.
+        String x = new String("x");
+
+        //It is preferrable to do it like this because the same reference will be used.
+        String y = "y";
+
+        //Good way to use a Pattern instance.
+        boolean answer = ROMAN.matcher("hi").matches();
+
+
+        //Do NOT do this! 👇
+        Long sum = 0L;
+        for (long i = 0; i <= Integer.MAX_VALUE; i++) {
+            sum += i;
+        }
+
 
     }
 }
