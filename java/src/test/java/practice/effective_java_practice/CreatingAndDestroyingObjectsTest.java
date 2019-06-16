@@ -30,4 +30,10 @@ public class CreatingAndDestroyingObjectsTest {
     public void testNonInstantiability() {
         CreatingAndDestroyingObjects.enforceNonInstantiability();
     }
+
+    @Test
+    public void testEliminateObsoleteReferences() {
+        CreatingAndDestroyingObjects.eliminateObsoleteReferences();
+    }
+
 }

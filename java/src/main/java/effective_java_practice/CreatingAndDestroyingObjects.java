@@ -162,7 +162,52 @@ public class CreatingAndDestroyingObjects {
         for (long i = 0; i <= Integer.MAX_VALUE; i++) {
             sum += i;
         }
+    }
 
+    /**
+     * Eliminating obsolete object references is good to do because it will
+     * reduce the possibility for memory leaks.
+     *
+     * Notes:
+     * The Stack class creates a memory leak when using the pop method because
+     * it allows references to exist outside of the active portion. Nulling them like
+     * is done in popMemorySafe() is a way to eliminate these obsolete references.
+     *
+     * Nulling obsolete references is necessary because the Stack acts as a cache so as long
+     * as the object itself exists and the pop method is used, obsolete references will be created.
+     *
+     * The best way to eliminate obsolete object references is to let the object fall out of scope.
+     * One way a programmer can strive for this is define the variable that holds the reference
+     * in the narrowest possible scope.
+     *
+     * When the programmer writes code that is responsible for memory management, there is
+     * increased risk of memory leaks.
+     *
+     * Caches are susceptible to memory leaks as well as code that registers listeners and
+     * callbacks that arent deregistered.
+     *
+     */
+    public static void eliminateObsoleteReferences() {
+        Stack stack = new Stack();
 
+        stack.push("hi");
+        stack.push("bye");
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+
+        stack.printStackSize();
+
+        stack.push("hi");
+        stack.push("bye");
+
+//        stack.printStack();
+
+        stack.popMemorySafe();
+        stack.popMemorySafe();
+
+//        stack.printStack();
+//
+//
+//        stack.printStackSize();
     }
 }
