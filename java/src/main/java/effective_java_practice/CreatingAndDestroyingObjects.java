@@ -210,4 +210,13 @@ public class CreatingAndDestroyingObjects {
 //
 //        stack.printStackSize();
     }
+
+    /**
+     * Don't use cleaners or finalizers except as a safety net.
+     * Even still, don't expect the cleaner/finalizer to run. Just to be
+     * safe, don't use them.
+     */
+    public static void cleanersAndFinalizers() {
+
+    }
 }
