@@ -8,5 +8,7 @@ public class MethodsCommonToAllObjectsTest {
     @Test
     public void testobeyGeneralContractWhenOverridingEquals() {
         MethodsCommonToAllObjects.obeyGeneralContractWhenOverridingEquals();
+        MethodsCommonToAllObjects.equalsMethodEquivalenceRelations();
+
     }
 }
