@@ -1,6 +1,5 @@
-package practice.exceptions;
+package exceptions;
 
-import exceptions.ExceptionExample;
 import org.junit.Test;
 
 public class TestExceptionExample {

@@ -1,6 +1,6 @@
 package effective_java_practice.model;
 
-public class MySingleton1 {
+public class MySingleton1 implements Cloneable {
 
     public static final MySingleton1 MY_SINGLETON_1 = new MySingleton1();
 

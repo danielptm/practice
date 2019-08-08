@@ -1,4 +1,4 @@
-package practice.testproblem;
+package testproblem;
 
 import interview_questions.ACompanyProblem;
 import org.junit.Assert;

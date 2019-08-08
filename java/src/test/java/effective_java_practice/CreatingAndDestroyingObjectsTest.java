@@ -1,6 +1,5 @@
-package practice.effective_java_practice;
+package effective_java_practice;
 
-import effective_java_practice.CreatingAndDestroyingObjects;
 import effective_java_practice.model.Timespan;
 import org.junit.Assert;
 import org.junit.Test;

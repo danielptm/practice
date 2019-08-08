@@ -1,6 +1,4 @@
-package practice.leetcode;
-
-import java.util.StringJoiner;
+package leetcode;
 
 public class LeetCode {
 

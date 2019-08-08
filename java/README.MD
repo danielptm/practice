@@ -10,5 +10,5 @@ Basic way to think about collections:
 ## Does this collection need key value pairs or not?
 Do key/value pairs need to be stored together?
 
-## About the practice.leetcode package:
+## About the leetcode package:
 This package is for doing problems from https://leetcode.com/problemset/all/ 

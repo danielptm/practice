@@ -1,20 +1,18 @@
-package practice.algorithms;
+package algorithms;
 
-import algorithms.BubbleSort;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TestBubbleSort {
-
+public class TestSelectionSort {
     @Test
-    public void testBubbleSort() {
+    public void testSort() {
         String expected = "[1, 2, 3, 4, 5]";
         int[] unsorted = new int[]{3, 1, 2, 5, 4};
-        BubbleSort bubbleSort = new BubbleSort(unsorted);
+        SelectionSort selectionSort = new SelectionSort(unsorted);
 
-        int[] sorted = bubbleSort.sort();
+        int[] sorted = selectionSort.sort();
 
         Assert.assertEquals(expected, Arrays.toString(sorted));
     }
