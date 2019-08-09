@@ -1,7 +1,11 @@
 package common_interview;
 
+        import common_interview.hierarchy.University;
         import org.junit.Assert;
         import org.junit.Test;
+
+        import java.util.Arrays;
+        import java.util.List;
 
 public class CommonInterviewQuestionsTest {
 
@@ -38,5 +42,17 @@ public class CommonInterviewQuestionsTest {
     public void testIsPalindrome() {
         Assert.assertEquals(false, CommonInterviewQuestions.isPalindrome("cat"));
         Assert.assertEquals(true, CommonInterviewQuestions.isPalindrome("detartrated"));
+    }
+
+
+
+    @Test
+    public void universities() {
+        University a = new University("a", null);
+        University b = new University("b", a);
+        University c = new University("c", b);
+
+        Assert.assertEquals("a", CommonInterviewQuestions.getParent(c));
+
     }
 }

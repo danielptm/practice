@@ -1,5 +1,7 @@
 package common_interview;
 
+import common_interview.hierarchy.University;
+
 import java.util.*;
 
 public class CommonInterviewQuestions {
@@ -76,4 +78,13 @@ public class CommonInterviewQuestions {
         String wordReversed = reverse(word);
         return word.equals(wordReversed);
     }
+
+    public static String getParent(University university) {
+        if (university.getParent() != null) {
+            getParent(university.getParent());
+        }
+        return university.getName();
+    }
+
+
 }
