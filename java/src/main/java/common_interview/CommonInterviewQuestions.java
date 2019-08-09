@@ -36,4 +36,44 @@ public class CommonInterviewQuestions {
 
         return wordMap.size();
     }
+
+    /**
+     *  Write a Java Program to iterate HashMap using While.
+     */
+    public static void iterateHashMap() {
+        Map<String, String> items = new HashMap<>();
+
+        items.putIfAbsent("item1", "dog");
+        items.putIfAbsent("item2", "cat");
+        Iterator iterator = items.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> item = (Map.Entry) iterator.next();
+            System.out.println(item.getValue());
+        }
+    }
+
+    /**
+     * Write a Java Program to find whether a number is prime or not.
+     */
+
+    public static boolean findPrimeNumber(int number) {
+        boolean notDivisible = true;
+        for (int i = 2; i < number; i ++) {
+            if (number % i == 0) {
+                notDivisible = false;
+                break;
+            }
+        }
+        return notDivisible;
+    }
+
+    /**
+     * Write a Java Program to find whether a string or number is palindrome or not.
+     *
+     * Reads the same backwards as forwards
+     */
+    public static boolean isPalindrome(String word) {
+        String wordReversed = reverse(word);
+        return word.equals(wordReversed);
+    }
 }
