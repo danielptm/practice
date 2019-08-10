@@ -4,6 +4,7 @@ package common_interview;
         import org.junit.Assert;
         import org.junit.Test;
 
+        import java.util.ArrayList;
         import java.util.Arrays;
         import java.util.List;
 
@@ -54,5 +55,12 @@ public class CommonInterviewQuestionsTest {
 
         Assert.assertEquals("a", CommonInterviewQuestions.getParent(c));
 
+    }
+
+    @Test
+    public void generateFibonacciSeries() {
+        List<Integer> expectedSeries = Arrays.asList(0,1,1,2,3,5,8,13,21);
+        List<Integer> resultSeries = CommonInterviewQuestions.generateFibonacciSeries(21);
+        Assert.assertEquals(expectedSeries, resultSeries);
     }
 }

@@ -87,4 +87,21 @@ public class CommonInterviewQuestions {
     }
 
 
+    public static List<Integer> generateFibonacciSeries(int number) {
+        List<Integer> resultList = new ArrayList<>(Arrays.asList(0, 1));
+        boolean limitReached = false;
+        int i = 0;
+        while (! limitReached) {
+            if (! (resultList.get(resultList.size() - 1)  >= number) ) {
+                int firstNumber = resultList.get(i);
+                int secondNumber = resultList.get(i + 1);
+                int newNumber = firstNumber + secondNumber;
+                resultList.add(newNumber);
+                i++;
+            } else {
+                limitReached = true;
+            }
+        }
+        return resultList;
+    }
 }
