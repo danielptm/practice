@@ -87,6 +87,11 @@ public class CommonInterviewQuestions {
     }
 
 
+    /**
+     * Generates a fibonacci sequence of numbers up to a given number.
+     * @param number
+     * @return
+     */
     public static List<Integer> generateFibonacciSeries(int number) {
         List<Integer> resultList = new ArrayList<>(Arrays.asList(0, 1));
         boolean limitReached = false;
