@@ -109,4 +109,14 @@ public class CommonInterviewQuestions {
         }
         return resultList;
     }
+
+    /**
+     * Return the second highest number from a collection of integers.
+     * @param arrayOfNumbers
+     * @return
+     */
+    public static int findSecondHighestNumberInArray(List<Integer> arrayOfNumbers) {
+        Collections.sort(arrayOfNumbers);
+        return arrayOfNumbers.get(arrayOfNumbers.size() - 2);
+    }
 }

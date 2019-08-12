@@ -63,4 +63,11 @@ public class CommonInterviewQuestionsTest {
         List<Integer> resultSeries = CommonInterviewQuestions.generateFibonacciSeries(21);
         Assert.assertEquals(expectedSeries, resultSeries);
     }
+
+    @Test
+    public void testFindSecondHighestNumberInArray() {
+        List<Integer> expectedSeries = Arrays.asList(2,6,7,100,23,52);
+        Assert.assertEquals(52, CommonInterviewQuestions.findSecondHighestNumberInArray(expectedSeries));
+
+    }
 }
