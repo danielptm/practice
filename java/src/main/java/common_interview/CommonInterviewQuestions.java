@@ -93,7 +93,7 @@ public class CommonInterviewQuestions {
      * @return
      */
     public static List<Integer> generateFibonacciSeries(int number) {
-        List<Integer> resultList = new ArrayList<>(Arrays.asList(0, 1));
+        List<Integer> resultList = Arrays.asList(0, 1);
         boolean limitReached = false;
         int i = 0;
         while (! limitReached) {
