@@ -6,7 +6,7 @@ public class Clouds {
      * What i learned: If you are at a position in an array and you need to gauge what is happening at other
      * places in the array from the position you are in. Do not just select that position in the array.
      * Create a variable for that other position and name it well. It will make writing/debugging the algorithm
-     * easier.
+     * easier. Also write pseudo code first.
      * @param c
      * @return
      */
