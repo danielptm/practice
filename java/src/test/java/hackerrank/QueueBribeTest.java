@@ -28,6 +28,11 @@ public class QueueBribeTest {
         QueueBribe.minimumBribes(input);
     }
 
+    /**
+     * This test is suppose to print 7 but prints 6.
+     * As far as I can tell it should be printing 6, but
+     * hacker rank says it should print 7.
+     */
     //7
     @Test
     public void testQueueBribe4() {
