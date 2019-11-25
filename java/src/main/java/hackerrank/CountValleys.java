@@ -17,7 +17,6 @@ public class CountValleys {
     public static int countValleys(int n, String s) {
         int uphillSteps = 0;
         int downHillSteps = 0;
-        int altitude = 0;
         boolean inValley = false;
         int completedValley = 0;
 
@@ -29,13 +28,10 @@ public class CountValleys {
             }
             if (s.charAt(i) == 'D') {
                 downHillSteps++;
-                altitude--;
             } else {
                 uphillSteps++;
-                altitude++;
             }
-
-            if (inValley && (altitude == 0)) {
+            if (inValley && (uphillSteps == downHillSteps)) {
                 completedValley++;
             }
         }
