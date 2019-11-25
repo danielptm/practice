@@ -37,9 +37,6 @@ public class CountValleys {
 
             if (inValley && (altitude == 0)) {
                 completedValley++;
-                uphillSteps = 0;
-                downHillSteps = 0;
-                inValley = false;
             }
         }
 
