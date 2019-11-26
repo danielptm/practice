@@ -3,6 +3,18 @@ package hackerrank;
 import java.util.Hashtable;
 import java.util.Map;
 
+/**
+ * Complete the checkMagazine function in the editor below.
+ * It must print  if the note can be formed using the magazine, or .
+ * checkMagazine has the following parameters:
+ * magazine: an array of strings, each a word in the magazine
+ * note: an array of strings, each a word in the ransom note
+ *
+ * This solution uses a hashtable but it could very well use a hashmap because
+ * there are no threading problems that could come about. It might perform slightly better for
+ * that reason too.
+ *
+ */
 public class RansomeNote {
     static void checkMagazine(String[] magazine, String[] note) {
         System.out.println(noteLogic(magazine, note));
