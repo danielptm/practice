@@ -1,5 +1,10 @@
 package hackerrank;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class BubbleSort {
 
     /**
@@ -36,5 +41,11 @@ public class BubbleSort {
         System.out.println("First Element: " + a[0]);
         System.out.println("Last Element: " + a[a.length - 1]);
 
+    }
+    static void print(int[] a) {
+        List<Integer> list = Arrays.stream(a)     // IntStream
+                .boxed()        // Stream<Integer>
+                .collect(Collectors.toList());
+        System.out.println(list);
     }
 }
