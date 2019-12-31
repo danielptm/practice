@@ -16,17 +16,19 @@ public class MakeAnagrams {
         fillMap(bList, bMap);
 
         for (Map.Entry<String, Integer> entry: aMap.entrySet()) {
+            String item = entry.getKey();
             if (bMap.containsKey(entry.getKey())) {
 
-                Integer aValue = entry.getValue() - 1;
-                if (aValue > -1) {
-                    aMap.put(entry.getKey(), aValue);
+                Integer aValue = entry.getValue();
+                Integer bValue = bMap.get(entry.getKey());
+
+                int abs = Math.abs(aValue - bValue);
+
+                if ((aValue > 0) && (bValue > 0)) {
+                    aMap.replace(item, 0);
+                    bMap.replace(item, abs);
                 }
 
-                Integer bValue = bMap.get(entry.getKey()) - 1;
-                if (bValue > -1) {
-                    bMap.put(entry.getKey(), bValue);
-                }
             }
         }
         int aSum = 0;

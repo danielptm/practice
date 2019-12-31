@@ -20,15 +20,25 @@ public class MakeAnagramsTest {
         Assert.assertEquals(4, result);
     }
 
-//    @Test
-//    public void testing4() {
-//        String a = "cade";
-//        String b = "abcc";
-//
-//        int result = MakeAnagrams.makeAnagram(a, b);
-//
-//        Assert.assertEquals(5, result);
-//    }
+    @Test
+    public void testing4() {
+        String a = "cef";
+        String b = "abcc";
+
+        int result = MakeAnagrams.makeAnagram(a, b);
+
+        Assert.assertEquals(5, result);
+    }
+
+    @Test
+    public void testing5() {
+        String a = "cef";
+        String b = "abccc";
+
+        int result = MakeAnagrams.makeAnagram(a, b);
+
+        Assert.assertEquals(6, result);
+    }
 
     @Test
     public void testing2() {
