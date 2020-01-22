@@ -26,20 +26,4 @@ public class MySelectionSort {
         return newList.stream().mapToInt(Integer::intValue).toArray();
     }
 
-    public static int[] addItemToArray(int num, int[] nums) {
-        int[] newArray = Arrays.copyOf(nums, nums.length + 1);
-        newArray[newArray.length - 1] = num;
-        return newArray;
-    }
-
-    public static int[] removeItemFromArray(int index, int[] nums) {
-        int[] newArray = new int[nums.length - 1];
-        int[] from = Arrays.copyOfRange(nums, 0, index);
-        int[] to = Arrays.copyOfRange(nums, index + 1, nums.length);
-        System.arraycopy(from, 0, newArray, 0, nums.length - 1);
-        System.arraycopy(to, 0, newArray, from.length - 1, nums.length - 1);
-        return newArray;
-    }
-
-
 }
