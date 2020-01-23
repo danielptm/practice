@@ -44,10 +44,20 @@ public class UtilsTest {
         int num = 3;
         boolean result = Utils.contains(num, nums);
         Assert.assertTrue(result);
-
-
         int num2 = 100;
         boolean result2 = Utils.contains(num2, nums);
         Assert.assertFalse(result2);
+    }
+
+    @Test
+    public void testing6() {
+        int num = 2;
+        int index = 1;
+        int[] items = new int[]{1, 3};
+        int[] result = Utils.insertItemAtIndex(index, num, items);
+
+        Assert.assertEquals(1, result[0]);
+        Assert.assertEquals(2, result[1]);
+        Assert.assertEquals(3, result[2]);
     }
 }

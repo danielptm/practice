@@ -45,4 +45,20 @@ public class Utils {
         return exists;
     }
 
+    /**
+     * Adds the item to the array at a specific index and move everything over to the right.
+     * @param index
+     * @param numsArray
+     * @return
+     */
+    public static int[] insertItemAtIndex(int index, int num, int[] numsArray) {
+        int[] newArray = new int[numsArray.length + 1];
+        int[] from = Arrays.copyOfRange(numsArray, 0, index);
+        int[] after = Arrays.copyOfRange(numsArray, index, numsArray.length);
+        newArray[index] = num;
+        System.arraycopy(from, 0, newArray, 0, from.length);
+        System.arraycopy(after, 0, newArray, index + 1, after.length);
+        return newArray;
+    }
+
 }
