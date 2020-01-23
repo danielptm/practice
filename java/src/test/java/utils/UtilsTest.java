@@ -4,9 +4,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UtilsTest {
+
     @Test
     public void testing2() {
         int[] nums = new int[]{1, 2, 3};
@@ -21,9 +24,7 @@ public class UtilsTest {
     public void testing3() {
         int[] nums = new int[]{1, 2, 3};
         int index = 1;
-
         int[] result = Utils.removeItemFromArray(index, nums);
-
         Assert.assertEquals(1, result[0]);
         Assert.assertEquals(3, result[1]);
     }
@@ -55,9 +56,19 @@ public class UtilsTest {
         int index = 1;
         int[] items = new int[]{1, 3};
         int[] result = Utils.insertItemAtIndex(index, num, items);
-
         Assert.assertEquals(1, result[0]);
         Assert.assertEquals(2, result[1]);
         Assert.assertEquals(3, result[2]);
+    }
+
+    @Test
+    public void testing7() {
+        int[] items = new int[]{1, 2, 3};
+        List<Integer> listItems = Arrays
+                .stream(items)
+                .boxed()
+                .collect(Collectors.toList());
+        int[] items2 = listItems.stream().mapToInt(Integer::intValue).toArray();
+        System.out.println(items2[0]);
     }
 }
