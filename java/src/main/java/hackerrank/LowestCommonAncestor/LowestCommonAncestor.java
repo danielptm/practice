@@ -6,6 +6,14 @@ import java.util.stream.Collectors;
 
 public class LowestCommonAncestor {
 
+    /**
+     * 9/10 passing on hackerrank...
+     * https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=trees
+     * @param root
+     * @param v1
+     * @param v2
+     * @return
+     */
     public static Node lca(Node root, int v1, int v2) {
         List<List<Node>> list = breakNodesIntoArrays(root);
         Node result = findAncestor(list, v1, v2);
