@@ -1,5 +1,7 @@
-package hackerrank;
+package hackerrank.HeightOfBinaryTree;
 
+import hackerrank.HeightOfBinaryTree.HeightOfBinaryTree;
+import hackerrank.HeightOfBinaryTree.Node;
 import org.junit.Assert;
 import org.junit.Test;
 
