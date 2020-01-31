@@ -31,7 +31,6 @@ public class LowestCommonAncestorTest {
 
         List<List<Node>> result = LowestCommonAncestor.breakNodesIntoArrays(node);
 
-
         Assert.assertEquals(3, result.size());
         Assert.assertEquals(1, result.get(0).size());
         Assert.assertEquals(2, result.get(1).size());
