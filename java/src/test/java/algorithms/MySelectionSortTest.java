@@ -18,4 +18,9 @@ public class MySelectionSortTest {
         List<Integer> itemsAsList = Arrays.stream(result).boxed().collect(Collectors.toList());
         Assert.assertEquals(expectedAsList, itemsAsList);
     }
+
+    @Test
+    public void testin2g() {
+        System.out.println(5 / 2);
+    }
 }
