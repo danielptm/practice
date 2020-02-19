@@ -1,6 +1,5 @@
 package threading.future;
 
-import javax.annotation.processing.Processor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -35,6 +34,8 @@ public class FutureWork {
 
         for (int i = 0; i < list.size(); i++) {
             try {
+                //Future represents the result of an async operation
+                //If it hasn't resolved yet then .get() will block the thread until it's done.
                 Future<String> fut = list.get(i);
                 System.out.println(fut.get());
             } catch (InterruptedException e) {
