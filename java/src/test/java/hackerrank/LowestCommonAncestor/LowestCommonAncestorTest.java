@@ -26,7 +26,7 @@ public class LowestCommonAncestorTest {
         Assert.assertEquals(1, result.data);
     }
 
-    @Test
+    @Ignore
     public void testfindAncestorAlternate4() {
         //5 3 8 2 4 6 7
         Node node = new Node(5);
@@ -40,7 +40,7 @@ public class LowestCommonAncestorTest {
         Assert.assertEquals(5, result.data);
     }
 
-    @Ignore
+    @Test
     public void testfindAncestorAlternate5() {
         //8 4 9 1 2 3 6 5
         Node node = new Node(8);
