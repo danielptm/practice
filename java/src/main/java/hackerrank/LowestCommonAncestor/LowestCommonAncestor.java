@@ -9,29 +9,32 @@ public class LowestCommonAncestor {
     public static Node lca(Node root, int v1, int v2) {
         //Node is parent to both if it is parent of both v1 and v2 and it is the largest number parent
         Node currentNode = root;
-
         Node parent = findParents(v1, v2, currentNode);
-
         // Write your code here.
         return parent;
     }
 
     public static Node findParents (int v1, int v2, Node node) {
-        if (Math.abs(v1 - v2) <=1) {
-            int min = Integer.min(v1, v2);
-            return new Node(min);
-        } else {
-            if (node.left != null && node.right != null) {
+        if (v1 == node.data || v2 == node.data) {
+            return node;
+        }
+        int min = Math.min(v1, v2);
+        int max = Math.max(v1, v2);
+        if (node.left != null && node.right != null) {
+            if (node.data > min && node.data < max) {
                 return node;
             } else {
-                if (node.left != null) {
-                    return findParents(v1, v2, node.left);
-                }
-                if (node.right != null) {
+                if (v1 > node.data && v2 > node.data) {
                     return findParents(v1, v2, node.right);
                 } else {
-                    return null;
+                    return findParents(v1, v2, node.left);
                 }
+            }
+        } else {
+            if (node.left != null) {
+                return findParents(v1, v2, node.left);
+            } else {
+                return findParents(v1, v2, node.right);
             }
         }
     }
