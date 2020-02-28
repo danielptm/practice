@@ -1,7 +1,7 @@
 package hackerrank;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.EmptyStackException;
+import java.util.Stack;
 
 
 /**
@@ -13,7 +13,58 @@ import java.util.Map;
 public class BalancedBrackets {
     // Complete the isBalanced function below.
     static String isBalanced(String s) {
-        return null;
-    }
+        String returnWord = "NO";
+        Stack<Character> stack = new Stack<>();
 
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            switch (c) {
+                case '{':
+                    stack.push('{');
+                    break;
+                case '(':
+                    stack.push('(');
+                    break;
+                case '[':
+                    stack.push('[');
+                    break;
+            }
+            if ((c != '{') && (c != '(') && (c != '[')) {
+                try {
+                    char peeked = stack.peek();
+                    switch (c) {
+                        case '}':
+                            if (peeked == '{') {
+                                returnWord = "YES";
+                                stack.pop();
+                            } else {
+                                returnWord = "NO";
+                            }
+                            break;
+                        case ')':
+                            if (peeked == '(') {
+                                returnWord = "YES";
+                                stack.pop();
+                            } else {
+                                returnWord = "NO";
+                            }
+                            break;
+                        case ']':
+                            if (peeked == '[') {
+                                returnWord = "YES";
+                                stack.pop();
+                            } else {
+                                returnWord = "NO";
+                            }
+                            break;
+                    }
+                } catch (EmptyStackException e) {
+                    System.out.println("Empty stack exception occurred for char at index: " + i);
+                    returnWord = "NO";
+                    break;
+                }
+            }
+        }
+        return returnWord;
+    }
 }
