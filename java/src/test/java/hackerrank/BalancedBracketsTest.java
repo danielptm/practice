@@ -44,4 +44,11 @@ public class BalancedBracketsTest {
         String expected = "YES";
         Assert.assertEquals(expected, isBalanced);
     }
+    @Test
+    public void testing6() {
+        String input = "{{[[(({{[[(({{[[(({{[[(({{[[(({{[[(({{[[(({{[[(({{[[(())]]}}))]]}}))]]}}))]]}}))]]}}))]]}}))]]}}))]]}}))]]}}";
+        String isBalanced = BalancedBrackets.isBalanced(input);
+        String expected = "YES";
+        Assert.assertEquals(expected, isBalanced);
+    }
 }
