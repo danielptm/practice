@@ -28,20 +28,24 @@ public class DynamicArray {
         List<Integer> sequences = new ArrayList<>(n);
         int lastAnswer = 0;
         int query = queries.get(0).get(0);
+
         int x = queries.get(0).get(1);
         int y = queries.get(0).size() > 2 ? queries.get(0).get(2) : -1;
-        switch (query) {
-            case 1:
-                int index = (x ^ lastAnswer) % n;
-                sequences.add(index, y);
-                break;
-            case 2:
-                int index2 = (x ^ lastAnswer) % n;
-                sequences.add(index2, y);
-                lastAnswer = y % sequences.size();
-                System.out.println(lastAnswer);
-                break;
+
+        int case1 = y;
+        int case2 = 2 * y;
+
+        if (query == case1) {
+            int index = (x ^ lastAnswer) % n;
+            sequences.add(index, y);
         }
+        if (query == case2) {
+            int index2 = (x ^ lastAnswer) % n;
+            sequences.add(index2, y);
+            lastAnswer = y % sequences.size();
+            System.out.println(lastAnswer);
+        }
+
         return sequences;
     }
 }
