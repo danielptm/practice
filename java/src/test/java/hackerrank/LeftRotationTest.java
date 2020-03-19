@@ -11,14 +11,8 @@ public class LeftRotationTest {
 
     @Test
     public void test() {
-        int d = 4;
-        int[] result = LeftRotation.rotLeft(a, d);
-        Assert.assertEquals("[5, 1, 2, 3, 4]", Arrays.toString(result));
-    }
-
-    @Test
-    public void testoneLeft() {
-        int[] items = LeftRotation.oneLeft(a);
-        Assert.assertEquals("[2, 3, 4, 5, 1]", Arrays.toString(items));
+        int d = 3;
+        int[] result = LeftRotation.leftShift(a, d);
+        Assert.assertEquals("[3, 4, 5, 1, 2]", Arrays.toString(result));
     }
 }
