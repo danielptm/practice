@@ -1,5 +1,6 @@
 package collections;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 
@@ -44,5 +45,13 @@ public class StreamsPracticeTest {
     @Test
     public void testreduce() {
         System.out.println(StreamsPractice.testReduce());
+    }
+
+    @Test
+    public void testFlatten() {
+        int[][] items = new int[][]{new int[]{1,2,3}, new int[]{4,5,6}};
+        int[] result = StreamsPractice.flattenArray(items);
+        Assert.assertEquals(1, result[0]);
+        Assert.assertEquals(6, result[5]);
     }
 }

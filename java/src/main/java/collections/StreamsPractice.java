@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -96,6 +97,10 @@ public class StreamsPractice {
     public static Integer testReduce() {
         List<Integer> numbers = new ArrayList<>(Arrays.asList(2, 1, 3, 4, 5, 6, 7, 8));
         return numbers.stream().sorted().reduce(0, (subtotal, elem) -> subtotal += elem);
+    }
+
+    public static int[] flattenArray(int[][] items) {
+        return Arrays.stream(items).flatMapToInt(item -> Arrays.stream(item)).toArray();
     }
 
 }
