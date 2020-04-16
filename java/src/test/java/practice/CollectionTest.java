@@ -264,5 +264,10 @@ public class CollectionTest
         System.out.println(items.keySet());
     }
 
+    @Test
+    public void testing() {
+        List<Integer> nums = new ArrayList<>();
+        nums.add(1);
+    }
 
 }
