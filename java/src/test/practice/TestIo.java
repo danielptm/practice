@@ -34,6 +34,11 @@ public class TestIo {
         byte[] x = bos.toByteArray();
         Greeting g2 = (Greeting) new ObjectInputStream(new ByteArrayInputStream(x)).readObject();
         System.out.println(g2.toString());
+    }
 
+    @Test
+    public void testing() {
+        int x = ((1 ^ 0) % 2);
+        String y = null;
     }
 }
