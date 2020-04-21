@@ -1,7 +1,7 @@
 package lectures.part1basics
 
 object Functions extends App {
-  def aFunction(a: String, b: Int): String = {
+  def aFunction(a: String, b: String): String = {
     a + " " + b
   }
 
@@ -10,7 +10,6 @@ object Functions extends App {
     if (n == 1) aString
     else aString + aRepeatedFunction(aString, n -1)
   }
-
 
   println(aRepeatedFunction("hello", 3))
 }
