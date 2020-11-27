@@ -3,6 +3,7 @@ from typing import List
 # https://leetcode.com/problems/two-sum/
 class TwoSum:
 
+    # brute force solution
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         result = []
         i = 0
@@ -21,6 +22,7 @@ class TwoSum:
             i += 1
         return result
 
+    # More efficient solution
     def twoSumAlt(self, nums: List[int], target: int) -> List[int]:
         result = []
         numsMap = {}
