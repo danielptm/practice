@@ -4,3 +4,4 @@ target
 .idea
 java/.idea
 javascript/.idea
+*.pyc
