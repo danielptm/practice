@@ -1,11 +1,8 @@
 package threading.future;
 
-import com.sun.xml.internal.ws.util.CompletedFuture;
-
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executors;
 
 class CompleteableWorker implements Callable {
 
