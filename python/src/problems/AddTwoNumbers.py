@@ -26,19 +26,24 @@ class AddTwoNumbers:
 
     def new_list(self, num: int) -> ListNode:
         str_val = str(num)
-        nodes = []
+        nums = []
         i = 0
         while i < len(str_val):
-            node = ListNode(str_val[i])
-            nodes.append(node)
+            nums.append(int(str_val[i]))
             i += 1
+        nums.reverse()
+        j = 1
+        base = ListNode(nums[0])
+        while j < len(nums):
+            self.create(base, nums[j])
+            j += 1
+        return base
 
-        j = 0
-        while j < len(nodes):
-
-
-
-
-        return None
+    def create(self, node: ListNode, num: int):
+        new_node = ListNode(num)
+        curr = node
+        while curr.next is not None:
+            curr = curr.next
+        curr.next = new_node
 
 
