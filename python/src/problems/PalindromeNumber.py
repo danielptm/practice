@@ -1,5 +1,6 @@
 class PalinedromeNumber:
 
+
     def isPalindrome(self, x: int) -> bool:
         str_val = str(x)
         str_len = len(str_val)
@@ -22,6 +23,5 @@ class PalinedromeNumber:
         while i >= 0:
             second_half_corrected += second_half[i]
             i -= 1
-        second_half_corrected = second_half_corrected
         result = True if first_half == second_half_corrected else False
         return result
