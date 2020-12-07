@@ -27,11 +27,6 @@ class LongestSubstring:
                     found_chars.append(char)
                     bs = None
                 else:
-                    last_appended_char = new_s[len(new_s) - 1]
-                    if char == last_appended_char:
-                        i = j - 1
-                    else:
-                        i = j
                     break
                 j += 1
             sub_strs.append(new_s)
