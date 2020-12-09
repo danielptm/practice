@@ -1,8 +1,9 @@
+from typing import List
+
 class LongestPalindromeSubstring:
     def longestPalindrome(self, s: str) -> str:
         found_pal = []
-        i = 0
-        j = len(s)
+
 
         if s == s[::-1]:
             return s
@@ -11,15 +12,15 @@ class LongestPalindromeSubstring:
         elif len(s) == 2:
             found_pal.append(s[0])
         else:
-            while i < len(s):
-                while j >= 0:
-                    substr1 = s[i:j - 1]
-                    substr2 = s[i + 1: j]
-                    if substr1 == substr1[::-1]:
-                        found_pal.append(substr1)
-                    if substr2 == substr2[::-1]:
-                        found_pal.append(substr2)
-                    j = j - 1
-                i = i + 1
-        found_pal.sort(key=len)
+            # Put all letters into a hashmap with letter
+            # as key and an array with the indexes of all ocurrences as value
+            # loop through hashmap if the length of the array is 2 or greater
+            # then do the palindrome search
+            # In the palindrome search double loop
+            # through all ocurrences match every index with every index
+            # and get that substring. If forwards == backwards then add it to found_pal
+            x = 's'
+
         return found_pal[len(found_pal) - 1]
+
+
