@@ -5,7 +5,7 @@ class LongestPalindromeS(unittest.TestCase):
 
     def test_result1(self):
         s = "babad"
-        expected = "aba"
+        expected = "bab"
         ls = LongestPalindromeSubstring()
         result = ls.longestPalindrome(s)
         self.assertTrue(expected, result)
@@ -52,7 +52,17 @@ class LongestPalindromeS(unittest.TestCase):
         result = ls.longestPalindrome(s)
         self.assertEqual(expected, result)
 
-    # def test_print(self):
-    #     x = 'abcde'
-    #     print(x[0:len(x) - 1])
-    #     print(x[1:len(x)])
+    def test_result8(self):
+        s = "babad"
+        expected = "bab"
+        ls = LongestPalindromeSubstring()
+        result = ls.longestPalindrome(s)
+        self.assertEqual(expected, result)
+
+    def test_result9(self):
+        s = "aacabdkacaa"
+        expected = "aca"
+        ls = LongestPalindromeSubstring()
+        result = ls.longestPalindrome(s)
+        self.assertEqual(expected, result)
+
