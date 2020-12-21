@@ -43,6 +43,7 @@ class LongestPalindromeSubstring:
                                 s_rev = sub[::-1]
                                 if sub == s_rev:
                                     result = sub
+                                    break
                             j = j - 1
                         i = i + 1
         return result
