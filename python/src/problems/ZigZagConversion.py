@@ -31,7 +31,7 @@ class ZigZagConversion:
         is_full_col = True
 
         while len(s) > 0:
-            if col == 0 or ((n - 1) % col == 0 and (col != 1)):
+            if col == 0 or (col % (n - 1) == 0 and (col != 1)):
                 is_full_col = True
             else:
                 is_full_col = False
