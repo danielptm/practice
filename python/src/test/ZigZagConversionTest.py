@@ -34,10 +34,17 @@ class ZigZagConversionTest(unittest.TestCase):
     def test_testing4(self):
         input = 'ABCDE'
         num = 2
-        expected = 'ACBD'
+        expected = 'ACEBD'
         zig_zag = ZigZagConversion().convert(input, num)
+        # ACBED
         self.assertEqual(expected, zig_zag)
 
-    # def test_testin(self):
-    #     x = 'yes' if 1 < 0 else x
-    #     print(x)
+
+    def test_testing5(self):
+        input = 'PAYPALISHIRING'
+        num = 5
+        expected = 'PHASIYIRPLIGAN'
+        zig_zag = ZigZagConversion().convert(input, num)
+        # ACBED
+        self.assertEqual(expected, zig_zag)
+

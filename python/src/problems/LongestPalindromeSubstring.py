@@ -1,6 +1,8 @@
 from typing import List
 
 class LongestPalindromeSubstring:
+    #TODO Improve this.
+    # https://leetcode.com/problems/longest-palindromic-substring/
     def longestPalindrome(self, s: str) -> str:
         result = 'a'
 

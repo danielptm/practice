@@ -1,27 +1,8 @@
 
 class ZigZagConversion:
 
-    '''
-    Algorithm:
-
-    n = number of rows
-    col = 0
-    load_row = 0
-
-    Each inner array is a column of characters.
-    col_chars = []
-
-    Step1
-    when load_row = 0 add a new column add character and increment load_row add new character to column
-    and repeat while low_row while < n. If end of string then break loop. If load_row == n then take step2.
-
-    Step 2
-    If load_row = n.
-    Decrement load row add new column and 1 character to columnt and repeat until load_row = 0.
-    If load_row = 0 then take step_1.
-    '''
-
-
+    #TODO This function is really ugly. It is inefficient and has different implementations based on input.
+    # https://leetcode.com/problems/zigzag-conversion/
     def convert(self, s: str, numRows: int) -> str:
         org_len = len(s)
         col = 0
@@ -37,15 +18,28 @@ class ZigZagConversion:
 
         if numRows == 2:
             i = 0
+
+            top_row = []
+            bottom_row = []
+
+            col = 0
             while i < len(s):
-                if i != 0 and not ((i - 1) % 2 != 0) and i < len(s) - 2:
-                    result = result + s[i + 1]
-                    result = result + s[i]
-                    if len(s) - 2 > i:
-                        i = i + 2
+                if i == 0 or i % 2 == 0:
+                    top_row.append(s[i])
                 else:
-                    result = result + s[i]
-                    i = i + 1
+                    bottom_row.append(s[i])
+                i = i + 1
+            j = 0
+            result = ''
+            while j < len(top_row):
+                result = result + top_row[j]
+                j = j + 1
+
+            j = 0
+            while j < len(bottom_row):
+                result = result + bottom_row[j]
+                j = j + 1
+
             return result
 
         while len(s) > 0:

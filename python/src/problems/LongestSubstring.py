@@ -3,6 +3,9 @@
 # Given a string s, find the length of the longest substring without repeating characters.
 class LongestSubstring:
 
+    #TODO Improve this
+    # https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
     def lengthOfLongestSubstring(self, s: str) -> int:
         sub_strs = []
         found_chars = []

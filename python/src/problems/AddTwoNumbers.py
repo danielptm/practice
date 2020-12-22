@@ -6,6 +6,8 @@ class ListNode:
         self.val = val
         self.next = next
 
+# Todo Make this nicer.
+# https://leetcode.com/problems/add-two-numbers/
 class AddTwoNumbers:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         num1 = self.reverse_number(l1)
