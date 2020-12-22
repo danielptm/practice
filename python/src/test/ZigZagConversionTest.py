@@ -24,8 +24,15 @@ class ZigZagConversionTest(unittest.TestCase):
         zig_zag = ZigZagConversion().convert(input, num)
         self.assertEqual(expected, zig_zag)
 
-    def test_testing2(self):
+    def test_testing3(self):
         input = 'ABCD'
+        num = 2
+        expected = 'ACBD'
+        zig_zag = ZigZagConversion().convert(input, num)
+        self.assertEqual(expected, zig_zag)
+
+    def test_testing4(self):
+        input = 'ABCDE'
         num = 2
         expected = 'ACBD'
         zig_zag = ZigZagConversion().convert(input, num)

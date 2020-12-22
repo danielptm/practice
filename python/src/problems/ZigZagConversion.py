@@ -32,15 +32,20 @@ class ZigZagConversion:
 
         result = ''
 
-        if numRows == 1:
+        if numRows == 1 or len(s) == 2:
             return s
 
         if numRows == 2:
             i = 0
             while i < len(s):
-                result = result + result[i:]
-                result = result + result[i + 1: i + 2]
-                i = i + 2
+                if i != 0 and not ((i - 1) % 2 != 0) and i < len(s) - 2:
+                    result = result + s[i + 1]
+                    result = result + s[i]
+                    if len(s) - 2 > i:
+                        i = i + 2
+                else:
+                    result = result + s[i]
+                    i = i + 1
             return result
 
         while len(s) > 0:
