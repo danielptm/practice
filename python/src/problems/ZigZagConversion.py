@@ -23,35 +23,66 @@ class ZigZagConversion:
 
 
     def convert(self, s: str, numRows: int) -> str:
-        n = numRows
+        org_len = len(s)
         col = 0
-        load_row = 0
         col_chars = [[]]
 
-        is_full_col = True
+        prev_full_col = None
+        next_full_col = None
+
+        result = ''
+
+        if numRows == 1:
+            return s
+
+        if numRows == 2:
+            i = 0
+            while i < len(s):
+                result = result + result[i:]
+                result = result + result[i + 1: i + 2]
+                i = i + 2
+            return result
 
         while len(s) > 0:
-            if col == 0 or (col % (n - 1) == 0 and (col != 1)):
-                is_full_col = True
-            else:
-                is_full_col = False
-            curr_char = s[0]
-            if load_row < n and is_full_col:
-                col_chars[col].append(curr_char)
-                load_row = load_row + 1
-                s = s[1: len(s)]
-            if load_row < n and not is_full_col:
-                if abs((n - 1) - col) == load_row:
+            if col == 0 or (col != 1 and (col % (numRows - 1) == 0 or (numRows - 1) % col == 0)):
+                prev_full_col = col
+                next_full_col = prev_full_col + numRows
+            if col == prev_full_col:
+                i = 0
+                if len(s) == 0:
+                    break
+                while i < numRows:
+                    if len(s) == 0:
+                        break
+                    curr_char = s[0]
                     col_chars[col].append(curr_char)
-                    load_row = load_row + 1
                     s = s[1: len(s)]
-                else:
-                    col_chars[col].append(None)
-                    load_row = load_row + 1
-                    continue
-            if load_row == numRows:
-                col = col + 1
-                load_row = 0
+                    i = i + 1
                 col_chars.append([])
+                col = col + 1
 
-        return None
+            if prev_full_col < col & col < next_full_col:
+                j = 0
+                while j < numRows:
+                    col_chars[col].append(None)
+                    j = j + 1
+                if len(s) == 0:
+                    break
+                curr_char = s[0]
+                place = (next_full_col - 1) - col
+                col_chars[col][place] = curr_char
+                s = s[1: len(s)]
+                col_chars.append([])
+                col = col + 1
+        i = 0
+        while i < numRows:
+            for item in col_chars:
+                if org_len == len(result):
+                    break
+                if i < len(item):
+                    if item[i] is not None:
+                        result += item[i]
+                else:
+                    continue
+            i += 1
+        return result
