@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 
+
 public class ReverseString {
     public void reverseString(char[] s) {
         // get untouched most inner and outer and swap their locations.
