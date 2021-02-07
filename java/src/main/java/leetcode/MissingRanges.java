@@ -3,6 +3,7 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://leetcode.com/problems/missing-ranges/
 public class MissingRanges {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> result = new ArrayList<>();
