@@ -3,6 +3,7 @@ package health_info_proj;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.List;
 
 public class RunnerTest {
@@ -10,7 +11,7 @@ public class RunnerTest {
     Runner runner = new Runner();
 
     @Test
-    public void testRun() {
+    public void testRun() throws IOException {
         runner.go();
     }
 

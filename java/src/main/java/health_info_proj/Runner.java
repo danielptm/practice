@@ -2,8 +2,13 @@ package health_info_proj;
 
 import org.apache.commons.io.FileUtils;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,7 +39,7 @@ public class Runner {
         return Arrays.asList(fileContents.split("\n"));
     }
 
-    public void go() {
+    public void go() throws IOException {
         String firstColumn = readFile("/health_proj/firstColumn.txt");
         String secondColumn = readFile("/health_proj/secondColumn.txt");
         String thirdColumn = readFile("/health_proj/thirdColumn.txt");
@@ -50,9 +55,35 @@ public class Runner {
                 .collect(Collectors.toList());
 
         List<String> secondList = breakAtLineOrSpace(secondColumn);
+        List<String> secondRefined = new ArrayList<>();
+
+        for (int i = 0; i < (secondList.size() - 1); i+=2) {
+            secondRefined.add(secondList.get(i) + "|" + secondList.get(i + 1));
+        }
+
         List<String> thirdList = breakAtLineOrSpace(thirdColumn);
 
-        String x = null;
+        String result = "";
+        for (int i = 0; i < firstList.size(); i++) {
+            String num = firstList.get(i).substring(0, 1);
+            try {
+                Integer.valueOf(num);
+                result += firstList.get(i) + "|" + secondRefined.get(i) + "|" + thirdList.get(i) + "\n";
+            } catch (Exception e) {
+
+            }
+        }
+
+
+
+        Path path = Paths.get("/Users/danieltuttle/Desktop/output.txt");
+
+//Use try-with-resource to get auto-closeable writer instance
+        try (BufferedWriter writer = Files.newBufferedWriter(path))
+        {
+            writer.write(result);
+        }
+
 
     }
 
