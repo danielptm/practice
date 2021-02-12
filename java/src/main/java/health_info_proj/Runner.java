@@ -1,0 +1,61 @@
+package health_info_proj;
+
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Runner {
+
+    public List<String> file1;
+    public List<String> file2;
+    public List<String> file3;
+
+    public String readFile(String path) {
+        File file = new File(Runner.class.getResource(path).getFile());
+        String data = null;
+        try {
+            data = FileUtils.readFileToString(file, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
+    public List<String> breakAtLineOrSpace(String fileContents) {
+        String replaced = fileContents.replaceAll("\n", " ");
+        return Arrays.asList(replaced.split(" "));
+    }
+
+    public List<String> breakAtLine(String fileContents) {
+        return Arrays.asList(fileContents.split("\n"));
+    }
+
+    public void go() {
+        String firstColumn = readFile("/health_proj/firstColumn.txt");
+        String secondColumn = readFile("/health_proj/secondColumn.txt");
+        String thirdColumn = readFile("/health_proj/thirdColumn.txt");
+
+        List<String> headers = breakAtLine(firstColumn)
+                .stream()
+                .filter(x -> x.substring(0, 1).equals("$"))
+                .collect(Collectors.toList());
+
+        List<String> firstList = breakAtLine(firstColumn)
+                .stream()
+                .filter(x -> !x.substring(0, 1).equals("$"))
+                .collect(Collectors.toList());
+
+        List<String> secondList = breakAtLineOrSpace(secondColumn);
+        List<String> thirdList = breakAtLineOrSpace(thirdColumn);
+
+        String x = null;
+
+    }
+
+
+
+}
