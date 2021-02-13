@@ -65,9 +65,14 @@ public class Runner {
 
         String result = "";
         for (int i = 0; i < firstList.size(); i++) {
-            String num = firstList.get(i).substring(0, 1);
             try {
-                Integer.valueOf(num);
+                if (i == 0) {
+                    result += headers.get(0) + "\n";
+                }
+                else if (i % 17 == 0) {
+                    int num = (i / 17) - 1;
+                    result += headers.get(num) + "\n";
+                }
                 result += firstList.get(i) + "|" + secondRefined.get(i) + "|" + thirdList.get(i) + "\n";
             } catch (Exception e) {
 
@@ -83,10 +88,5 @@ public class Runner {
         {
             writer.write(result);
         }
-
-
     }
-
-
-
 }
