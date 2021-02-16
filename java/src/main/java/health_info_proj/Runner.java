@@ -63,6 +63,21 @@ public class Runner {
 
         List<String> thirdList = breakAtLineOrSpace(thirdColumn);
 
+        firstList = firstList.stream()
+                .map(x -> {
+                    try {
+                        String c = String.valueOf(x.charAt(1));
+                        if (c.equals(" ")) {
+                            return x.substring(2);
+                        }
+                        Integer.valueOf(x.substring(0, 2));
+                        return x.substring(3);
+                    } catch (Exception e) {
+                        return x;
+                    }
+                })
+                .collect(Collectors.toList());
+
         String result = "";
         for (int i = 0; i < firstList.size(); i++) {
             try {
