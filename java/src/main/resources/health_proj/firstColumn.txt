@@ -26,8 +26,7 @@ $All races, both sexes, 1-4 years$
 6 Influenza and pneumonia (J09-J18)
 7 Chronic lower respiratory diseases (J40-J47)
 8 Septicemia (A40-A41)
-9 In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown
-behavior (D00-D48)
+9 In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)
 10 Certain conditions originating in the perinatal period (P00-P96)
 11 Cerebrovascular diseases (I60-I69)
 12 Meningitis (G00,G03)
@@ -141,8 +140,7 @@ $All races, both sexes, 55-64 years$
 12 Viral hepatitis (B15-B19)
 13 Essential hypertension and hypertensive renal disease (I10,I12,I15)
 14 Human immunodeficiency virus (HIV) disease (B20-B24)
-15 In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown
-behavior (D00-D48)
+15 In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)
 ... All other causes (Residual)
 $All races, both sexes, 65-74 years$
 ... All causes
@@ -251,7 +249,9 @@ $All races, male, 5-14 years$
 13 Complications of medical and surgical care (Y40-Y84,Y88)
 14 Diabetes mellitus (E10-E14)
 15 Meningitis (G00,G03)
+... All other causes (Residual)
 $All races, male, 15-24 years$
+... All causes
 1 Accidents (unintentional injuries) (V01-X59,Y85-Y86)
 2 Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)
 3 Assault (homicide) (*U01-*U02,X85-Y09,Y87.1)
@@ -268,8 +268,8 @@ $All races, male, 15-24 years$
 14 In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48)
 15 Anemias (D50-D64)
 ... All other causes (Residual)
-... All causes
 $All races, male, 25-34 years$
+... All causes
 1 Accidents (unintentional injuries) (V01-X59,Y85-Y86)
 2 Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)
 3 Assault (homicide) (*U01-*U02,X85-Y09,Y87.1)

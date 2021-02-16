@@ -81,6 +81,7 @@ public class Runner {
         String result = "";
         for (int i = 0; i < firstList.size(); i++) {
             try {
+                // The header here produced is not right. The result.txt file in resources has right header
                 if (i == 0) {
                     result += headers.get(0) + "\n";
                 }
