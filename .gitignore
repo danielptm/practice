@@ -5,3 +5,4 @@ target
 java/.idea
 javascript/.idea
 *.pyc
+*.DS_Store
