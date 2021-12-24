@@ -1,9 +1,7 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 //TODO: Commit this to leetcode
 // https://leetcode.com/problems/valid-parentheses/
@@ -12,36 +10,32 @@ public class ValidParenthesis {
     //Try using a stack. Push the char onto the stack if its a left bracket
     //Then if it isnt pop it and match them up.
     public boolean isValid(String text) {
-        Map<String, String> opposites =  getOpposities();
-        List<Boolean> result = new ArrayList<>();
+        int textLength = text.length();
+        if (textLength % 2 != 0) {
+            return false;
+        }
+        Stack<Character> charStack = new Stack<Character>();
         for (int i = 0; i < text.length(); i++) {
-            String current = String.valueOf(text.charAt(i));
-            if (opposites.get(current) != null) {
-                int oppositeIndex = text.indexOf(opposites.get(current), i);
-                if (oppositeIndex == -1) {
-                    result.add(false);
-                    continue;
-                }
-                if (((oppositeIndex + 1) % 2) == 0) {
-                    result.add(true);
-                    continue;
-                }
+            char curr = text.charAt(i);
+            if (curr == '(' || curr == '[' || curr == '{') {
+                charStack.push(curr);
             } else {
-                continue;
+                try {
+                    char fromStack = charStack.pop();
+                    if ((curr == ']' && fromStack != '[') ||
+                            (curr == '}' && fromStack != '{') ||
+                            (curr == ')' && fromStack != '(')) {
+                        return false;
+                    }
+                } catch (Exception e) {
+                    return false;
+                }
             }
         }
-        return result.contains(false) ? false : true;
-    }
-
-    public Map<String, String> getOpposities() {
-        Map<String, String> OPPOSITIES = new HashMap<>();
-        OPPOSITIES.put("(", ")");
-//        OPPOSITIES.put(")", "(");
-        OPPOSITIES.put("{", "}");
-//        OPPOSITIES.put("}", "{");
-        OPPOSITIES.put("[", "]");
-//        OPPOSITIES.put("]", "[");
-        return OPPOSITIES;
-
+        if (charStack.size() == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

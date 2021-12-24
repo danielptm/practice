@@ -56,6 +56,38 @@ public class ValidParenthesisTest {
     }
 
     @Test
+    public void validParenthesis7() {
+        ValidParenthesis validParenthesis = new ValidParenthesis();
+        String text = "((";
+        boolean result = validParenthesis.isValid(text);
+        Assert.assertEquals(false, result);
+    }
+
+    @Test
+    public void validParenthesis8() {
+        ValidParenthesis validParenthesis = new ValidParenthesis();
+        String text = "){";
+        boolean result = validParenthesis.isValid(text);
+        Assert.assertEquals(false, result);
+    }
+
+    @Test
+    public void validParenthesis9() {
+        ValidParenthesis validParenthesis = new ValidParenthesis();
+        String text = "([";
+        boolean result = validParenthesis.isValid(text);
+        Assert.assertEquals(false, result);
+    }
+
+    @Test
+    public void validParenthesis10() {
+        ValidParenthesis validParenthesis = new ValidParenthesis();
+        String text = "(([]){})";
+        boolean result = validParenthesis.isValid(text);
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
     public void testing1() {
         Stack<String> items = new Stack<>();
         items.push("a");
