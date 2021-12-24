@@ -1,14 +1,2 @@
-
-## Java problems.
-
-Get collections excercizes from here
-https://www.w3resource.com/java-exercises/collection/index.php
-
-## Map/Collection notes:
-
-Basic way to think about collections:
-## Does this collection need key value pairs or not?
-Do key/value pairs need to be stored together?
-
-## About the leetcode package:
-This package is for doing problems from https://leetcode.com/problemset/all/ 
+## About this repo
+The purpose of this repo is to hold solutions to problems done on various programmer websites. I like leetcode the best, so most of the problems are from there. Most of the stuff is in java and python. I try and mix it up with my practice. I have projects such as kickballin.io and the former globati.com. The effort done here is to work on the fundamentals of using data structures and writing algorithms to solve problems.
