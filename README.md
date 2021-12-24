@@ -1,0 +1,2 @@
+## About this repo
+The purpose of this repo is to hold solutions to problems done on various programmer websites. I like leetcode the best, so lately I have been using this website most however there are lots from other places too. Most of the stuff is in java and python. I try and mix it up with my practice. I have projects such as kickballin.io and the former globati.com but aside from those I have this. The effort done here is to work on the fundamentals of using data structures and writing algorithms to solve problems.
