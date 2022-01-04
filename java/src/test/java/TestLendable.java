@@ -13,6 +13,7 @@ public class TestLendable {
         System.out.println(book);
     }
 
+
     private Lendable getLendable() {
         return new Book("123");
     }

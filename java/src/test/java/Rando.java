@@ -18,4 +18,15 @@ public class Rando {
         System.out.println(items2);
     }
 
+    @Test
+    public void testStringbuilder() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ABC");
+        System.out.println(sb);
+        sb.setLength(1);
+        System.out.println(sb.toString());
+        sb.setLength(10);
+        System.out.println(sb.toString());
+    }
+
 }
