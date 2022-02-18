@@ -1,57 +1,30 @@
 package leetcode.algorithmpractice.dfs;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 // https://leetcode.com/problems/maximum-depth-of-binary-tree/
 public class MaxDepthBinaryTree {
 
-    private Stack<TreeNode> stack;
-
-    public MaxDepthBinaryTree() {
-        this.stack = new Stack<>();
-    }
+    private List<Integer> counts = new ArrayList<>();
 
     public int maxDepth(TreeNode root) {
-        List<TreeNode> nodes = new ArrayList<>();
-        if (root.left != null) {
-            nodes.add(root.left);
+        if (root == null) {
+            return 0;
         }
-        if (root.right != null) {
-            nodes.add(root.right);
-        }
-        int count = dfs(nodes);
-        return count;
+        recurse(root, 0);
+        Collections.sort(this.counts);
+        return this.counts.get(this.counts.size() - 1);
     }
 
-    public int dfs(List<TreeNode> nodes) {
-        int count = 1;
-        for (TreeNode node: nodes) {
-            stack.add(node);
-            while (!stack.isEmpty()) {
-                TreeNode curr = stack.pop();
-                List<TreeNode> currNodes = new ArrayList<>();
-                if (curr.left != null) {
-                    currNodes.add(curr.left);
-                }
-                if (curr.right != null) {
-                    currNodes.add(curr.right);
-                }
-                boolean isCounted = false;
-                for (TreeNode n: currNodes) {
-                    if (!isCounted) {
-                        count = count + 1;
-                        isCounted = true;
-                    }
-                    stack.add(n);
-                }
-                if (currNodes.size() == 0) {
-                    count = count + 1;
-                }
-            }
+    public void recurse(TreeNode node, int count) {
+        count = count + 1;
+        counts.add(count);
+        if (node.left != null) {
+            recurse(node.left, count);
         }
-        return count;
+        if (node.right != null) {
+            recurse(node.right, count);
+        }
     }
 }
 
