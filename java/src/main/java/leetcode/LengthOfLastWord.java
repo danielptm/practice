@@ -3,6 +3,7 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+//https://leetcode.com/problems/length-of-last-word/
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
         String[] splitWords = s.split(" ");
