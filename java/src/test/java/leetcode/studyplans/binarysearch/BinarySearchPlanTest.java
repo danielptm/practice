@@ -1,4 +1,4 @@
-package leetcode.binarysearchplan;
+package leetcode.studyplans.binarysearch;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -56,5 +56,10 @@ public class BinarySearchPlanTest {
     public void testGetMiddle() {
         int res = BinarySearchPlan.getMiddleIndex(3, 5);
         Assert.assertEquals(4, res);
+    }
+
+    @Test
+    public void getNumber() {
+
     }
 }

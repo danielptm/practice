@@ -1,4 +1,4 @@
-package leetcode.binarysearchplan;
+package leetcode.studyplans.binarysearch;
 
 public class BinarySearchPlan {
     public int search(int[] nums, int target) {
