@@ -53,4 +53,17 @@ public class ProgrammingSkills1Test {
         Assert.assertTrue(expected == res);
     }
 
+    @Test
+    public void testHammingWeight() {
+        int n = 00000000000000000000000000001011;
+        int res = new ProgrammingSkills1().hammingWeight(n);
+        Assert.assertEquals(3, res);
+    }
+
+    @Test
+    public void testSubtractProductAndSum() {
+        int n = 234;
+        int res = new ProgrammingSkills1().subtractProductAndSum(n);
+        Assert.assertEquals(15, res);
+    }
 }
