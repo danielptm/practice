@@ -44,7 +44,6 @@ public class BestTimeStockTest {
         Assert.assertEquals(expected, result);
     }
 
-    // TODO: This is the only unit test that does not pass in leetcode because the algorithm is too slow for large data sets.
     @Ignore
     public void test6() {
         int[] nums = new int[12000];

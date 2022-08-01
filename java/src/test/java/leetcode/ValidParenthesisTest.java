@@ -46,7 +46,6 @@ public class ValidParenthesisTest {
         Assert.assertEquals(true, result);
     }
 
-    //TODO: Test doesnot pass
     @Test
     public void validParenthesis6() {
         ValidParenthesis validParenthesis = new ValidParenthesis();

@@ -52,7 +52,6 @@ public class MergeTwoSortedLinkedListsTest {
         return list2;
     }
 
-    //TODO Go through this in debugger
     @Test
     public void testing() {
         SinglyLinkedList list1 = getList1();

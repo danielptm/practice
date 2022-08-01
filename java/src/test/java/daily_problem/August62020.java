@@ -25,7 +25,6 @@ public class August62020 {
     }
 
 
-    //TODO: Alternative interpretation of problem. To dermine path relative to row, must go down 1 row to [same index location] or [same index location + 1]
     @Test
     public void testing2() {
         int[][] nums = {{1}, {2, 3}, {1, 5, 1}};

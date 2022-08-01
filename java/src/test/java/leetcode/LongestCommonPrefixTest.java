@@ -3,7 +3,6 @@ package leetcode;
 import org.junit.Assert;
 import org.junit.Test;
 
-//TODO: Commit this solution to leetcode.
 public class LongestCommonPrefixTest {
 
     @Test
@@ -26,7 +25,6 @@ public class LongestCommonPrefixTest {
         Assert.assertEquals(expected, result);
     }
 
-    //TODO: This test does not pass
     @Test
     public void longestCommonPefix3() {
         String[] args = new String[]{"cir","car"};

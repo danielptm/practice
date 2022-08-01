@@ -3,8 +3,6 @@ package leetcode;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
-//TODO: Commit this to leetcode
-// https://leetcode.com/problems/valid-parentheses/
 public class ValidParenthesis {
 
     //Try using a stack. Push the char onto the stack if its a left bracket
