@@ -24,6 +24,13 @@ public class ClimbingStairs {
                 continue;
             }
             List<String> newPaths = new ArrayList<>();
+            //TODO
+            /**
+             * Do this with a hashmap and a list. With the hashmap store the key as a generated path.
+             * The value is an object. The object has a boolean saying if equals n or not.
+             * Use the list to store the most recent generated paths that have been stored in the hashmap.
+             * Retrieve these most recent ones and get each object from the map, create a new path, value, store it in list, repeat
+             */
             for (int i = 0; i < paths.size(); i++) {
                 String np1 = paths.get(i) + ":1";
                 String np2 = paths.get(i) + ":2";
