@@ -3,8 +3,8 @@ package leetcode;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class ClimbingStairsTest {
 
@@ -34,6 +34,13 @@ public class ClimbingStairsTest {
         int n = 5;
         int res = new ClimbingStairs().climbStairs(n);
         Assert.assertEquals(8, res);
+    }
+
+    @Test
+    public void climbStairsTest5() {
+        int n = 8;
+        int res = new ClimbingStairs().climbStairs(n);
+        Assert.assertEquals(34, res);
     }
 
 //    @Test
@@ -87,7 +94,57 @@ public class ClimbingStairsTest {
     @Test
     public void generateMostEfficientPathTest() {
         int n = 3;
-        List<String > res = new ClimbingStairs().generateMostEfficientPaths(n);
+        List<String > res = new ClimbingStairs().mostEfficientPathsAndCombos(n);
         Assert.assertEquals(2, res.size());
+    }
+
+    @Test
+    public void testCreateOpposite() {
+        String x = "21";
+        int n = 1;
+
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        String res = climbingStairs.createOppositeForI(n, x);
+        Assert.assertEquals("22", res);
+
+    }
+
+    @Test
+    public void testGetAllCombos() {
+        String x = "222";
+
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        Set<String> res = climbingStairs.getAllCombos(x);
+        Assert.assertEquals(8, res.size());
+
+    }
+
+    @Test
+    public void testGetAllCombos2() {
+        String x = "22";
+
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        Set<String> res = climbingStairs.getAllCombos(x);
+        Assert.assertEquals(4, res.size());
+
+    }
+
+    @Test
+    public void testGetAllCombos4() {
+        String x = "2";
+
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        Set<String> res = climbingStairs.getAllCombos(x);
+        Assert.assertEquals(2, res.size());
+
+    }
+
+    @Test
+    public void testGetAllCombos3() {
+        int x = 4;
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        List<String> res = climbingStairs.mostEfficientPathsAndCombos(x);
+        Assert.assertEquals(4, res.size());
+
     }
 }

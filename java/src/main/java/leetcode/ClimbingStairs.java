@@ -21,10 +21,21 @@ public class ClimbingStairs {
         }
 
         String leastEfficientPath = generateLeastEfficientPath(n);
-        List<String> mostEfficientPaths = generateMostEfficientPaths(n);
+        List<String> mostEfficientPaths = mostEfficientPathsAndCombos(n);
+
+        mostEfficientPaths = mostEfficientPaths
+                .stream()
+                .map(i -> createString(i.split("")))
+                .collect(Collectors.toList());
+
+//        Collections.sort(mostEfficientPaths);
+//        Collections.reverse(mostEfficientPaths);
+
 
         Map<String, Path> pathMap = new HashMap<>();
         List<String> paths = new ArrayList<>();
+
+
 
         for (String mostEfficientPath: mostEfficientPaths) {
             pathMap.put(mostEfficientPath, new Path(mostEfficientPath, n));
@@ -56,52 +67,69 @@ public class ClimbingStairs {
         return res;
     }
 
-     List<String> generateMostEfficientPaths(int n) {
-        String p = "";
+     List<String> mostEfficientPathsAndCombos(int n) {
+        List<String> paths = new ArrayList<>();
         int dividedTwo = n / 2;
-        List<String> mePaths = new ArrayList<>();
-        if (dividedTwo == 1) {
-            mePaths.add("1");
-            mePaths.add("2");
-            return mePaths;
+
+        StringJoiner sb = new StringJoiner("", "", "");
+        for (int i = 0; i < dividedTwo; i++) {
+            sb.add("2");
         }
-        if (n % 2 == 0) {
-            StringJoiner sb = new StringJoiner(":", "", "");
-            for (int i = 0; i < dividedTwo; i++) {
-                sb.add("2");
+        String nString = sb.toString();
+        Set<String> combos = getAllCombos(nString);
+        paths.addAll(combos);
+        return paths;
+    }
+
+    Set<String> getAllCombos(String s) {
+        Set<String> combos = new HashSet<>();
+        for (int i = 0; i < s.length(); i++) {
+            String newS = createOppositeForI(i, s);
+            combos.add(newS);
+            for (int j = 0; j < s.length(); j++) {
+                newS = createOppositeForI(j, newS);
+                combos.add(newS);
             }
-            p = sb.toString();
-            String left = new String(p);
-            String right = new String(p);
-            left = left.substring(2);
-            right = left.substring(0, right.length() - 2);
-            left = "1:" + left;
-            right = right + ":1";
-            String opp = p.replace("2", "1");
-            mePaths.add(p);
-            mePaths.add(right);
-            mePaths.add(left);
-            mePaths.add(opp);
-        } else {
-            // This has the capacity to cause a bug later down the road, because there are 2 equally efficient paths.
-            StringJoiner sb = new StringJoiner(":", "", "");
-            sb.add("1");
-            for (int i = 0; i < dividedTwo; i++) {
-                sb.add("2");
-                p = sb.toString();
-                mePaths.add(p);
-            }
-            StringJoiner sb2 = new StringJoiner(":", "", "");
-            for (int i = 0; i < dividedTwo; i++) {
-                sb2.add("2");
-            }
-            sb2.add("1");
-            p = sb2.toString();
-            String opp = p.replace("2", "1");
-            mePaths.add(opp);
-            mePaths.add(p);
         }
-        return mePaths;
+        return combos;
+    }
+
+    String createOppositeForI(int i, String s) {
+        char[] strings = s.toCharArray();
+        if (strings[i] == '2') {
+            strings[i] = '1';
+        } else if (strings[i] == '1'){
+            strings[i] = '2';
+        }
+        else {
+            System.err.println("Error creating opposite");
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < strings.length; j++) {
+           sb.append(strings[j]);
+        }
+        return sb.toString();
+    }
+
+    String[] getStringBits(String s) {
+        return s.split(":");
+    }
+
+    String createString(String[] s) {
+        StringJoiner sb = new StringJoiner(":", "", "");
+        for (int i = 0; i < s.length; i++) {
+            sb.add(s[i]);
+        }
+        return sb.toString();
+    }
+
+    String createString(String s) {
+        StringJoiner sb = new StringJoiner(":", "", "");
+        for (int i = 0; i < s.length(); i++) {
+            String c = String.valueOf(s.charAt(i));
+            sb.add(c);
+        }
+        return sb.toString();
     }
 
     List<String> generateMostEfficientOpposite(List<String> n) {
