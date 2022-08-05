@@ -43,6 +43,13 @@ public class ClimbingStairsTest {
         Assert.assertEquals(34, res);
     }
 
+    @Test
+    public void climbStairsTest6() {
+        int n = 35;
+        int res = new ClimbingStairs().climbStairs(n);
+        Assert.assertEquals('?', res);
+    }
+
 //    @Test
 //    public void climbStairsTest3() {
 //        int n = 35;
