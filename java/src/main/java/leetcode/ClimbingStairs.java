@@ -13,58 +13,7 @@ import java.util.stream.Collectors;
  */
 public class ClimbingStairs {
     public int climbStairs(int n) {
-        if (n == 1) {
-            return 1;
-        }
-        if (n == 0) {
-            return 0;
-        }
-
-        String leastEfficientPath = generateLeastEfficientPath(n);
-        List<String> mostEfficientPaths = mostEfficientPathsAndCombos(n);
-
-        mostEfficientPaths = mostEfficientPaths
-                .stream()
-                .map(i -> createString(i.split("")))
-                .collect(Collectors.toList());
-
-//        Collections.sort(mostEfficientPaths);
-//        Collections.reverse(mostEfficientPaths);
-
-
-        Map<String, Path> pathMap = new HashMap<>();
-        List<String> paths = new ArrayList<>();
-
-
-
-        for (String mostEfficientPath: mostEfficientPaths) {
-            pathMap.put(mostEfficientPath, new Path(mostEfficientPath, n));
-            paths.add(mostEfficientPath);
-        }
-
-
-        while (!leastEfficientPathExists(paths, leastEfficientPath)) {
-            List<String> newPaths = new ArrayList<>();
-            for (int i = 0; i < paths.size(); i++) {
-                String np1 = paths.get(i) + ":1";
-                String np2 = paths.get(i) + ":2";
-                if (!stringExists(newPaths, np1) && !stringExists(paths, np1)) {
-                    Path path = new Path(np1, n);
-                    pathMap.put(np1, path);
-                    newPaths.add(np1);
-                }
-                if (!stringExists(newPaths, np2) && !stringExists(paths, np2)) {
-                    Path path = new Path(np2, n);
-                    pathMap.put(np2, path);
-                    newPaths.add(np2);
-
-                }
-            }
-            paths = new ArrayList<>();
-            paths.addAll(newPaths);
-        }
-        int res =  sumPaths(pathMap);
-        return res;
+        return -1;
     }
 
      List<String> mostEfficientPathsAndCombos(int n) {
