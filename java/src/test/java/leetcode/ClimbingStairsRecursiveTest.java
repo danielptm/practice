@@ -16,6 +16,6 @@ public class ClimbingStairsRecursiveTest {
   public void test2() {
     ClimbingStairsRecursive csr = new ClimbingStairsRecursive();
     int res = csr.climbStairs(3);
-    Assert.assertEquals(2, res);
+    Assert.assertEquals(3, res);
   }
 }

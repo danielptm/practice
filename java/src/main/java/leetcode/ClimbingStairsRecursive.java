@@ -13,21 +13,31 @@ public class ClimbingStairsRecursive {
     while (!nodeStack.isEmpty()) {
       Node node = nodeStack.pop();
       if (node.isVisited() == false) {
-        processNode(node, count);
-        if (node.getAddOne() != null) {
-          nodeStack.add(node.getAddOne());
-        }
-        if (node.getAddTwo() != null) {
-          nodeStack.add(node.getAddTwo());
+        if (node.pathIsFound()) {
+          count += 1;
+          node.visited = true;
+          continue;
+        } else {
+          processNode(node, n);
+          if (node.addOne.pathSum <= n) {
+            nodeStack.add(node.addOne);
+          }
+          if (node.addTwo.pathSum <= n) {
+            nodeStack.add(node.addTwo);
+          }
         }
       }
     }
     return count;
   }
-  public void processNode(Node node, int count) {
+  public void processNode(Node node, int n) {
     node.setVisited(true);
-    if (node.pathIsFound()) {
-      count += 1;
+    if (node.currPath.equals("")) {
+      node.addOne = new Node(node.currPath + "1", n);
+      node.addTwo = new Node(node.currPath + "2", n);
+    } else {
+      node.addOne = new Node(node.currPath + ":1", n);
+      node.addTwo = new Node(node.currPath + ":2", n);
     }
   }
 }
@@ -42,26 +52,19 @@ class Node {
   int n;
 
   public Node(String p, int n) {
-    this.visited = false;
-    this.n = n;
     this.currPath = p;
-    if (currPath == "") {
-      pathSum = 0;
-      this.addOne = new Node("1", n);
-      this.addTwo = new Node("2", n);
-    } else if (currPath.equals("1")) {
-      pathSum += 1;
-    } else if (currPath.equals("2")) {
-      pathSum += 2;
-    } else {
-      this.sum(this.currPath);
-      if (this.pathSum <= (this.n - 2)) {
-        this.addTwo = new Node(this.currPath + ":2", n);
-      }
-      if (this.pathSum <= (this.n - 1)) {
-        this.addOne = new Node(this.currPath + ":1", n);
-      }
+    this.n = n;
+   if (p.equals("")) {
+     this.pathSum = 0;
+   }
+   else if (p.equals("1")) {
+      this.pathSum = 1;
     }
+   else if (p.equals("2")) {
+      this.pathSum = 2;
+    } else {
+     this.sum(p);
+   }
   }
 
   void sum(String path) {
@@ -102,7 +105,8 @@ class Node {
   }
 
   public boolean pathIsFound() {
-    return this.n == this.pathSum;
+    boolean res = this.n == this.pathSum;
+    return res;
   }
 
   @Override
