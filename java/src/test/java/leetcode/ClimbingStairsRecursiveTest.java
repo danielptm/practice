@@ -18,4 +18,11 @@ public class ClimbingStairsRecursiveTest {
     int res = csr.climbStairs(3);
     Assert.assertEquals(3, res);
   }
+
+  @Test
+  public void test3() {
+    ClimbingStairsRecursive csr = new ClimbingStairsRecursive();
+    int res = csr.climbStairs(30);
+    Assert.assertEquals(3, res);
+  }
 }
