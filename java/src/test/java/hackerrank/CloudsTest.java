@@ -34,8 +34,9 @@ public class CloudsTest {
     public void testJumpOnClouds4() {
         int[] input4 = new int[]{0,0,0,1,0,0};
         int result4 = Clouds.jumpingOnClouds(input4);
-
-
+        Integer x = null;
+        Integer x2 = 1;
+        System.out.println(x + x2);
     }
 
 
