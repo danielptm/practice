@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class AddBinaryTest {
 
+
     @Test
     public void test() {
         String a = "11";
