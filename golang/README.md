@@ -18,6 +18,6 @@ lessons:
 - 34 testing with go ✅
 
 - 42-52 Organizing data with structs ✅
-- 57 Difference between maps and structs
-- All of section 6
-- All of section 7
+- 57 Difference between maps and structs ✅
+- All of section 6 - interfaces
+- All of section 7 - goroutines and channels
