@@ -1,5 +1,8 @@
+import math
 import operator
 from functools import reduce
+
+from src.problems.project_euler.Util import is_prime_naiive, sum_nums_div_3
 
 
 class ProjectEuler:
@@ -30,14 +33,19 @@ class ProjectEuler:
     def problem2(self):
         return 1
 
-    '''
-    https://projecteuler.net/problem=3
-    <p>The prime factors of $13195$ are $5, 7, 13$ and $29$.</p>
-    <p>What is the largest prime factor of the number $600851475143$?</p>
-    '''
 
-    def problem3(self):
-        return 1
+    def problem3(self, num):
+        '''
+        https://projecteuler.net/problem=3
+        <p>The prime factors of $13195$ are $5, 7, 13$ and $29$.</p>
+        <p>What is the largest prime factor of the number $600851475143$?</p>
+        Use sieve of erathosthenes algorithm.
+        https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+        '''
+        pass
+
+
+
 
     '''
     https://projecteuler.net/minimal=4
