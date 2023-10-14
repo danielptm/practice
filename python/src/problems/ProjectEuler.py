@@ -1,12 +1,25 @@
-class ProjectEuler:
+import operator
+from functools import reduce
 
+
+class ProjectEuler:
     '''
     https://projecteuler.net/problem=1
     <p>If we list all the natural numbers below $10$ that are multiples of $3$ or $5$, we get $3, 5, 6$ and $9$. The sum of these multiples is $23$.</p>
     <p>Find the sum of all the multiples of $3$ or $5$ below $1000$.</p>
     '''
-    def problem1(self):
-        return 1
+
+    def problem1(self, limit):
+        nums = []
+        for i in range(limit):
+            if i % 3 == 0:
+                if i not in nums:
+                    nums.append(i)
+            if i % 5 == 0:
+                if i not in nums:
+                    nums.append(i)
+        res = reduce(operator.add, nums)
+        return res
 
     '''
     https://projecteuler.net/problem=2
@@ -22,6 +35,7 @@ class ProjectEuler:
     <p>The prime factors of $13195$ are $5, 7, 13$ and $29$.</p>
     <p>What is the largest prime factor of the number $600851475143$?</p>
     '''
+
     def problem3(self):
         return 1
 
@@ -30,5 +44,6 @@ class ProjectEuler:
     <p>A palindromic number reads the same both ways. The largest palindrome made from the product of two $2$-digit numbers is $9009 = 91 \times 99$.</p>
     <p>Find the largest palindrome made from the product of two $3$-digit numbers.</p>
     '''
+
     def problem4(self):
         return 1
