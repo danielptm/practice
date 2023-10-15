@@ -9,16 +9,27 @@ class Problems:
         1) We can sort the array so that smaller numbers come first. This is useful because in this use case there are
         numbers that are larger than the target which are therefore not going to be a solution.
         2)
-
         '''
-        nums = sorted(nums)
-        result = []
+        # Solution 1
+        # nums = sorted(nums)
+        # result = []
+        # for i in range(len(nums)):
+        #     for j in range(len(nums)):
+        #         if i != j:
+        #             summ = nums[i] + nums[j]
+        #             if summ == target:
+        #                 result.append(i)
+        #                 result.append(j)
+        #                 return result
+        # Solution 2 (optimized)
+        previously_found = {}
         for i in range(len(nums)):
-            for j in range(len(nums)):
-                if i != j:
-                    summ = nums[i] + nums[j]
-                    if summ == target:
-                        result.append(i)
-                        result.append(j)
-                        return result
+            if i == 0:
+                previously_found[nums[i]] = i
+                continue
+            curr = nums[i]
+            diff = target - curr
+            if diff in previously_found and (diff + curr == target):
+                return [previously_found[diff], i]
+            previously_found[nums[i]] = i
 
