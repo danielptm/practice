@@ -87,18 +87,19 @@ class BiggestIsland:
                 island_size = island_size + 1
                 current_island.append(curr_node.position)
                 neighbors = get_neighbors(curr_node.position, grid, grid_explored)
+                print("")
+                print(curr_node.position)
+                print_grid(grid)
                 for n in neighbors:
                     fifo.add(n)
                 if len(neighbors) == 0:
-                    sizes.append(island_size)
-                    island_size = 0
-            else:
+                    if island_size not in sizes:
+                        sizes.append(island_size)
+                        island_size = 0
+            if fifo.length() == 0 and len(unexplored) > 0:
                 pos = unexplored.pop()
                 n = Node(pos)
                 fifo.add(n)
-                if island_size > 0:
-                    sizes.append(island_size)
-                island_size = 0
         biggest_island = max(sizes)
         return biggest_island
 
