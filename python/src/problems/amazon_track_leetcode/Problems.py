@@ -1,4 +1,11 @@
-from typing import List
+from typing import List, Optional
+
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 
 # https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/508/
@@ -33,3 +40,9 @@ class Problems:
                 return [previously_found[diff], i]
             previously_found[nums[i]] = i
 
+
+    #https://leetcode.com/explore/interview/card/amazon/77/linked-list/513/
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        if l1.next != None and l2.next != None:
+            self.addTwoNumbers(l1.next, l2.next)
+        pass

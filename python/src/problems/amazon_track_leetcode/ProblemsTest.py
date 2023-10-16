@@ -1,6 +1,6 @@
 import unittest
 
-from src.problems.amazon_track_leetcode.Problems import Problems
+from src.problems.amazon_track_leetcode.Problems import Problems, ListNode
 
 
 class ProblemsTest(unittest.TestCase):
@@ -12,3 +12,23 @@ class ProblemsTest(unittest.TestCase):
         result = Problems().twoSum(input, target)
         self.assertEqual(expected, result)
 
+    def test_addTwoNumbers(self):
+        l1 = [2, 4, 3]
+        l2 = [5, 6, 4]
+        expected = [7,0,8]
+        l1_n1 = ListNode(2)
+        l1_n2 = ListNode(4)
+        l1_n3 = ListNode(3)
+
+        l1_n2.next = l1_n3
+        l1_n1.next = l1_n2
+
+        l2_n1 = ListNode(5)
+        l2_n2 = ListNode(6)
+        l2_n3 = ListNode(4)
+
+        l2_n2.next = l2_n3
+        l2_n1.next = l2_n2
+
+        result = Problems().addTwoNumbers(l1_n1, l2_n1)
+        self.assertEqual(True, False)
