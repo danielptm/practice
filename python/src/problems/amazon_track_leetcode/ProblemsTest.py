@@ -58,3 +58,8 @@ class ProblemsTest(unittest.TestCase):
         p = Problems()
         res = p.lengthOfLongestSubstring("abcabcbb")
         self.assertEqual(3, res)
+
+    def test_lengthOfLongestSubstring4(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("xxzqi")
+        self.assertEqual(4, res)
