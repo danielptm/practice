@@ -32,3 +32,29 @@ class ProblemsTest(unittest.TestCase):
 
         result = Problems().addTwoNumbers(l1_n1, l2_n1)
         self.assertEqual(True, False)
+
+
+    def test_lengthOfLongestSubstring(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("abcabcbb")
+        self.assertEqual(3, res)
+
+    def test_lengthOfLongestSubstring1(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("pwwkew")
+        self.assertEqual(3, res)
+
+    def test_lengthOfLongestSubstring2(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("abcabcbb")
+        self.assertEqual(3, res)
+
+    def test_lengthOfLongestSubstring3(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("bbbbbb")
+        self.assertEqual(1, res)
+
+    def test_lengthOfLongestSubstring4(self):
+        p = Problems()
+        res = p.lengthOfLongestSubstring("abcabcbb")
+        self.assertEqual(3, res)

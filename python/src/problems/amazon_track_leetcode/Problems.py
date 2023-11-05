@@ -46,3 +46,24 @@ class Problems:
         if l1.next != None and l2.next != None:
             self.addTwoNumbers(l1.next, l2.next)
         pass
+
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        sub_strings = []
+        curr_root = ""
+        for i in range(len(s)):
+            curr_root = s[i]
+            sub_strings.append((1,curr_root))
+            for j in range(len(s)):
+                if i == j:
+                    continue
+                if s[j] not in curr_root:
+                    curr_root += s[j]
+                    node = (len(curr_root), curr_root)
+                    if node not in sub_strings:
+                        sub_strings.append(node)
+                else:
+                    curr_root = ""
+                    break
+        sub_strings = sorted(sub_strings)
+        result = sub_strings[len(sub_strings) - 1]
+        return result[0]
