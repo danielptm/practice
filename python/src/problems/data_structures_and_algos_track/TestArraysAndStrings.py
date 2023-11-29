@@ -100,4 +100,23 @@ class ArraysAndSTrings(unittest.TestCase):
         res = self.longestOnes(nums,k)
         self.assertEqual(e, res)
 
+    def runningSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        res = []
+        res.append(nums[0])
+        for i in range(1, len(nums), 1):
+            prev = i - 1
+            curr = i
+            x = res[prev] + nums[curr]
+            res.append(x)
+        return res
 
+
+    def test_runningSum(self):
+        input = [1, 2, 3, 4]
+        e = [1,3,6,10]
+        res = self.runningSum(input)
+        self.assertEqual(e, res)
