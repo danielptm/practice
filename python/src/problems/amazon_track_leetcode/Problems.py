@@ -47,13 +47,17 @@ class Problems:
             self.addTwoNumbers(l1.next, l2.next)
         pass
 
+
+    # https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/2961/
     def lengthOfLongestSubstring(self, s: str) -> int:
+        if s == "":
+            return 0
         sub_strings = []
         curr_root = ""
         for i in range(len(s)):
             curr_root = s[i]
-            sub_strings.append((1,curr_root))
-            for j in range(len(s)):
+            sub_strings.append((1, curr_root))
+            for j in range(i, len(s), 1):
                 if i == j:
                     continue
                 if s[j] not in curr_root:
