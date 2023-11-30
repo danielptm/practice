@@ -70,19 +70,42 @@ class TestHashing(unittest.TestCase):
         for m in matches:
             winners.add(m[0])
             if m[1] not in lost_match_records.keys():
-                lost_match_records[1] = 1
+                lost_match_records[m[1]] = 1
             else:
-                lost_match_records[1] = lost_match_records[1] + 1
+                lost_match_records[m[1]] = lost_match_records[m[1]] + 1
         for w in winners:
             if w not in lost_match_records.keys():
                 result[0].append(w)
         for k,v in lost_match_records.items():
-            if k == 1:
-                result[1].append(v)
+            if v == 1:
+                result[1].append(k)
+        result[0] = sorted(result[0])
+        result[1] = sorted(result[1])
         return result
 
     def test_findWinners(self):
         matches = [[1, 3], [2, 3], [3, 6], [5, 6], [5, 7], [4, 5], [4, 8], [4, 9], [10, 4], [10, 9]]
         e = [[1, 2, 10], [4, 5, 7, 8]]
         res = self.findWinners(matches)
+        self.assertListEqual(sorted(e[0]), sorted(res[0]))
+        self.assertListEqual(sorted(e[1]), sorted(res[1]))
+
+
+    def largestUniqueNumber(self, nums: List[int]) -> int:
+        largest_n = -1
+        nums_counts = {}
+        for n in nums:
+            if n not in nums_counts.keys():
+                nums_counts[n] = 1
+            else:
+                nums_counts[n] = nums_counts[n] + 1
+        for k,v in nums_counts.items():
+            if k > largest_n and v == 1:
+                largest_n = k
+        return largest_n
+
+    def test_largestUniqueNumber(self):
+        nums = [5, 7, 3, 9, 4, 9, 8, 3, 1]
+        e = 8
+        res = self.largestUniqueNumber(nums)
         self.assertEqual(e, res)
