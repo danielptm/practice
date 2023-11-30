@@ -2,18 +2,24 @@ package employee
 
 import "go_practice/hexagonal_architecture/models"
 
-type EmployeeCrudService struct{}
+type EmployeeCrudService struct {
+	EmployeeRepositoryInterface
+}
 
-func (e EmployeeCrudService) Create(employee models.EmployeeCreate) error {
-	print("hello from employee service")
-	return nil
+func (e EmployeeCrudService) Create(employee_dto models.EmployeeDto) (*models.Employee, error) {
+	employee := models.TransformEmployeeDtoToEmployee(employee_dto)
+	e_persisted, err := e.EmployeeRepositoryInterface.Create(employee)
+	if err != nil {
+		return nil, err
+	}
+	return &e_persisted, nil
 }
 
 func (e EmployeeCrudService) Read(id string) error {
 	return nil
 }
 
-func (e EmployeeCrudService) Update(employee models.EmployeeCreate) error {
+func (e EmployeeCrudService) Update(employee models.Employee) error {
 	return nil
 }
 
