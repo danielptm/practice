@@ -100,6 +100,7 @@ class ArraysAndSTrings(unittest.TestCase):
         res = self.longestOnes(nums,k)
         self.assertEqual(e, res)
 
+    # https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/703/arraystrings/4658/
     def runningSum(self, nums):
         """
         :type nums: List[int]
@@ -120,3 +121,26 @@ class ArraysAndSTrings(unittest.TestCase):
         e = [1,3,6,10]
         res = self.runningSum(input)
         self.assertEqual(e, res)
+
+    def minStartValue(self, nums):
+        nums = sorted(nums)
+        abs_v_of_min = abs(nums[0])
+
+        for i in range(abs_v_of_min, len(nums), 1):
+            for j in range(len(nums)):
+                ans = i + nums[j]
+                if ans <= 1:
+                    continue
+                if j == len(nums) - 1:
+                    return i
+
+
+
+    def test_minStartValue(self):
+        input = [-3,2,-3,4,2]
+        e = 5
+        res = self.minStartValue(input)
+        self.assertEqual(e, res)
+
+
+
