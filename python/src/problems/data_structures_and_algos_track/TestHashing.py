@@ -1,3 +1,4 @@
+import math
 import unittest
 from typing import List
 
@@ -108,4 +109,88 @@ class TestHashing(unittest.TestCase):
         nums = [5, 7, 3, 9, 4, 9, 8, 3, 1]
         e = 8
         res = self.largestUniqueNumber(nums)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons(self):
+        text = "nlaebolko"
+        e = 1
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons2(self):
+        text = "leetcode"
+        e = 0
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons3(self):
+        text = "loonbalxballpoon"
+        e = 2
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons4(self):
+        text = "balon"
+        e = 0
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons5(self):
+        text = "balllllllllllloooooooooon"
+        e = 1
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+
+    def maxNumberOfBalloons(self, text: str) -> int:
+        counts = {"b":0, "a": 0, "l": 0, "o": 0, "n": 0}
+        for n in text:
+            if n in counts.keys():
+                counts[n] = counts[n] + 1
+        large_n = 0
+        for k,v in counts.items():
+            if v > large_n:
+                large_n = v
+        b = counts["b"]
+        a = counts["a"]
+        l = counts["l"]
+        o = counts["o"]
+        n = counts["n"]
+
+        if o < 2 or l < 2:
+            return 0
+
+        arr_counts = [b, a, l, o, n]
+        min_arr_counts = min(arr_counts)
+
+        result = math.floor(large_n / 2)
+
+        if min_arr_counts < result:
+            return min_arr_counts
+        else:
+            return result
+
+    def test_maxNumberOfBalloons5(self):
+        text = "krhizmmgmcrecekgyljqkldocicziihtgpqwbticmvuyznragqoyrukzopfmjhjjxemsxmrsxuqmnkrzhgvtgdgtykhcglurvppvcwhrhrjoislonvvglhdciilduvuiebmffaagxerjeewmtcwmhmtwlxtvlbocczlrppmpjbpnifqtlninyzjtmazxdbzwxthpvrfulvrspycqcghuopjirzoeuqhetnbrcdakilzmklxwudxxhwilasbjjhhfgghogqoofsufysmcqeilaivtmfziumjloewbkjvaahsaaggteppqyuoylgpbdwqubaalfwcqrjeycjbbpifjbpigjdnnswocusuprydgrtxuaojeriigwumlovafxnpibjopjfqzrwemoinmptxddgcszmfprdrichjeqcvikynzigleaajcysusqasqadjemgnyvmzmbcfrttrzonwafrnedglhpudovigwvpimttiketopkvqw"
+        e = 10
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons6(self):
+        text = "lloo"
+        e = 0
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+
+    def test_maxNumberOfBalloons7(self):
+        text = "ballon"
+        e = 0
+        res = self.maxNumberOfBalloons(text)
+        self.assertEqual(e, res)
+
+    def test_maxNumberOfBalloons7(self):
+        text = "mbetypbpefxvviadqaodrbjeoacfomepmzymiudltgnvnpbowwmjgpzzhtiismearuwocsgbiimiqqzaozgeizikrlxmupfzjzmlfttqqbpfblqfkecsdfbsceqjhubfxksivrfwvukapxmuciybfhzlmpeamdxziptxregymqtmgcsujmugissgnlbhxbcxxeoumcqyulvahuianbaaxgzrtmshjguqdaxvxndzoqvwmcjfhpevavnrciqbymnlylbrfkkiceienoarfrzzxtuaqapaeqeqolozadmtgjyhfqzpuaskjuawxqkdqyjqcmbxtvshzrquvegcuyuckznspmrxvqdassidcmrajedsnuuumfwqzvasljlyvfefktiqgvzvdzojtjegsyhbepdkuwvgrfscezvswywmdavpxlekbrlkfnbyvlobazmvgulxrfdranuhomkrlpbfeagfxxxuhjuqhbkhznixquxrxngwimdxdhqbdaouitsvcdmbwxbbaomkgxsqwnexbjjyhtxvkjfqkrrxjghvzqsattubphryqxxdyjkihfnzvjhohnhdlfwoqiwtmwzfgcyhyqtcketvgnbchcxvnhcsoosirfqgdgcsitegzlxdfijzmxnvhrulmgvoqfpzesootscnxenokmmozmoxpaverydbsnimwacjqhrtxkqtvghjyushoctxphxzztukgmnoeycqaeukymvwxcsyvvctflqjhtcvjtxncuvhkptkjnzaetwbzkwnseovewuhpkaxiphdicgacszzdturzgjkzwgkmzzavykancvvzaafgzjhcyicorrblmhsnnkhfkujttbkuuedhwguuaapojmnjdfytdhrepjwcddzsoeutlbbljlikghxefgbqenwamanikmynjcupqpdjnhldaixwygcvsgdkzszmsptqqnroflgozblygtiyaxudwmooiviqcosjfksnevultrf"
+        e = 14
+        res = self.maxNumberOfBalloons(text)
         self.assertEqual(e, res)
