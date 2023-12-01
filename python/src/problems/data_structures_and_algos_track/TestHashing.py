@@ -141,35 +141,6 @@ class TestHashing(unittest.TestCase):
         res = self.maxNumberOfBalloons(text)
         self.assertEqual(e, res)
 
-
-    def maxNumberOfBalloons(self, text: str) -> int:
-        counts = {"b":0, "a": 0, "l": 0, "o": 0, "n": 0}
-        for n in text:
-            if n in counts.keys():
-                counts[n] = counts[n] + 1
-        large_n = 0
-        for k,v in counts.items():
-            if v > large_n:
-                large_n = v
-        b = counts["b"]
-        a = counts["a"]
-        l = counts["l"]
-        o = counts["o"]
-        n = counts["n"]
-
-        if o < 2 or l < 2:
-            return 0
-
-        arr_counts = [b, a, l, o, n]
-        min_arr_counts = min(arr_counts)
-
-        result = math.floor(large_n / 2)
-
-        if min_arr_counts < result:
-            return min_arr_counts
-        else:
-            return result
-
     def test_maxNumberOfBalloons5(self):
         text = "krhizmmgmcrecekgyljqkldocicziihtgpqwbticmvuyznragqoyrukzopfmjhjjxemsxmrsxuqmnkrzhgvtgdgtykhcglurvppvcwhrhrjoislonvvglhdciilduvuiebmffaagxerjeewmtcwmhmtwlxtvlbocczlrppmpjbpnifqtlninyzjtmazxdbzwxthpvrfulvrspycqcghuopjirzoeuqhetnbrcdakilzmklxwudxxhwilasbjjhhfgghogqoofsufysmcqeilaivtmfziumjloewbkjvaahsaaggteppqyuoylgpbdwqubaalfwcqrjeycjbbpifjbpigjdnnswocusuprydgrtxuaojeriigwumlovafxnpibjopjfqzrwemoinmptxddgcszmfprdrichjeqcvikynzigleaajcysusqasqadjemgnyvmzmbcfrttrzonwafrnedglhpudovigwvpimttiketopkvqw"
         e = 10
@@ -189,8 +160,24 @@ class TestHashing(unittest.TestCase):
         res = self.maxNumberOfBalloons(text)
         self.assertEqual(e, res)
 
-    def test_maxNumberOfBalloons7(self):
+    def test_maxNumberOfBalloons8(self):
         text = "mbetypbpefxvviadqaodrbjeoacfomepmzymiudltgnvnpbowwmjgpzzhtiismearuwocsgbiimiqqzaozgeizikrlxmupfzjzmlfttqqbpfblqfkecsdfbsceqjhubfxksivrfwvukapxmuciybfhzlmpeamdxziptxregymqtmgcsujmugissgnlbhxbcxxeoumcqyulvahuianbaaxgzrtmshjguqdaxvxndzoqvwmcjfhpevavnrciqbymnlylbrfkkiceienoarfrzzxtuaqapaeqeqolozadmtgjyhfqzpuaskjuawxqkdqyjqcmbxtvshzrquvegcuyuckznspmrxvqdassidcmrajedsnuuumfwqzvasljlyvfefktiqgvzvdzojtjegsyhbepdkuwvgrfscezvswywmdavpxlekbrlkfnbyvlobazmvgulxrfdranuhomkrlpbfeagfxxxuhjuqhbkhznixquxrxngwimdxdhqbdaouitsvcdmbwxbbaomkgxsqwnexbjjyhtxvkjfqkrrxjghvzqsattubphryqxxdyjkihfnzvjhohnhdlfwoqiwtmwzfgcyhyqtcketvgnbchcxvnhcsoosirfqgdgcsitegzlxdfijzmxnvhrulmgvoqfpzesootscnxenokmmozmoxpaverydbsnimwacjqhrtxkqtvghjyushoctxphxzztukgmnoeycqaeukymvwxcsyvvctflqjhtcvjtxncuvhkptkjnzaetwbzkwnseovewuhpkaxiphdicgacszzdturzgjkzwgkmzzavykancvvzaafgzjhcyicorrblmhsnnkhfkujttbkuuedhwguuaapojmnjdfytdhrepjwcddzsoeutlbbljlikghxefgbqenwamanikmynjcupqpdjnhldaixwygcvsgdkzszmsptqqnroflgozblygtiyaxudwmooiviqcosjfksnevultrf"
         e = 14
         res = self.maxNumberOfBalloons(text)
         self.assertEqual(e, res)
+
+    # https://leetcode.com/problems/maximum-number-of-balloons/
+    def maxNumberOfBalloons(self, text: str) -> int:
+        counts = {"b":0, "a": 0, "l": 0, "o": 0, "n": 0}
+        for n in text:
+            if n in counts.keys():
+                counts[n] = counts[n] + 1
+        result = 0
+        while counts["b"] > 0 and counts["a"] > 0 and counts["l"] > 1 and counts["o"] > 1 and counts["n"] > 0:
+            counts["b"] = counts["b"] - 1
+            counts["a"] = counts["a"] - 1
+            counts["l"] = counts["l"] - 2
+            counts["o"] = counts["o"] - 2
+            counts["n"] = counts["n"] - 1
+            result += 1
+        return result
