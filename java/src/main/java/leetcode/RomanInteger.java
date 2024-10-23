@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.*;
 
+//https://leetcode.com/problems/roman-to-integer/description/
 public class RomanInteger {
 
     static Map<String, Integer> nums = new HashMap<>();
@@ -17,38 +18,27 @@ public class RomanInteger {
     }
 
 
-    List<Integer> getNonConsecutiveIndices(String c, int j , String[] nums) {
-        List<Integer> result = new ArrayList<>();
-        for (int i = j; i < (nums.length); i++) {
-            String curr = nums[i];
-            String prev = nums[i - 1];
-            if (curr.equals(prev)) {
-                //do nothing
-            } else if (curr.equals(nums[i])) {
-                result.add(i);
-            }
-        }
-        return result;
-    }
 
     public int romanToInt(String s) {
         int result = 0;
         String[] chars = s.split("");
-        for (int i = 0; i < chars.length; i++) {
-            String curr = chars[i];
-            List<Integer> indices = getNonConsecutiveIndices(curr, i, chars);
-            if (indices.size() == 0) {
-                result += nums.get(chars[i]);
+        int l = chars.length - 2;
+
+        result += nums.get(chars[chars.length - 1]);
+        for (int i = l; i >= 0; i--) {
+            int prevI = i + 1;
+            String thisC = chars[i];
+            String prevC = chars[prevI];
+            int thisVal = nums.get(thisC);
+            int prevVal = nums.get(prevC);
+            if (thisVal < prevVal) {
+                result -= thisVal;
             } else {
-                int toSubtract = 0;
-                for (int j = indices.get(0); j < indices.get(1);j ++) {
-                     toSubtract += nums.get(chars[j]);
-                }
-                result -= toSubtract;
-                 i = indices.get(1);
+                result += thisVal;
             }
 
         }
+
         return result;
     }
 }
