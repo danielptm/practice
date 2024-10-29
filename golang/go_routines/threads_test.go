@@ -15,3 +15,7 @@ func TestRun2(t *testing.T) {
 	println("In test, after call to run()")
 	println(<-c)
 }
+
+func TestRun3(t *testing.T) {
+	run3()
+}

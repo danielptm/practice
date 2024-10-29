@@ -14,3 +14,9 @@ func run2(c chan string) {
 	println("after sleep")
 	c <- "from run2(c)"
 }
+
+func run3() {
+	for i := 0; i < 5; i++ {
+		println(i)
+	}
+}
