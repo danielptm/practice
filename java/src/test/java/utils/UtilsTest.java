@@ -3,9 +3,7 @@ package utils;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UtilsTest {
@@ -70,5 +68,92 @@ public class UtilsTest {
                 .collect(Collectors.toList());
         int[] items2 = listItems.stream().mapToInt(Integer::intValue).toArray();
         System.out.println(items2[0]);
+    }
+
+    interface Stock {
+        public double getAmount();
+    }
+
+    class Bid  implements Stock {
+        private double amount;
+        String name;
+
+        public Bid(String name, double amount) {
+            this.amount = amount;
+            this.name = name;
+        }
+
+        @Override
+        public double getAmount() {
+            return this.amount;
+        }
+    }
+
+    class Offer implements Stock {
+        private double amount;
+        private String name;
+
+        public Offer(String name, double amount) {
+            this.amount = amount;
+            this.name = name;
+        }
+
+        @Override
+        public double getAmount() {
+            return this.amount;
+        }
+    }
+
+    class StockData {
+        private String name;
+        private List<Stock> offers;
+        private List<Stock> bids;
+        public StockData(String name, List<Stock> offers, List<Stock> bids) {
+            this.name = name;
+            this.offers = offers;
+            this.bids = bids;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public List<Stock> getOffers() {
+            return offers;
+        }
+
+        public List<Stock> getBids() {
+            return bids;
+        }
+    }
+
+    @Test
+    public void testing8() {
+        Map<String, StockData> stockData = new HashMap<>();
+        List<Stock> bids = new ArrayList<>();
+        bids.add(new Bid("AAPL", 4.2));
+        bids.add(new Bid("AAPL", 4.3));
+        bids.add(new Bid("AAPL", 4.4));
+
+        List<Stock> offers = new ArrayList<>();
+        offers.add(new Offer("AAPL", 4.5));
+        offers.add(new Offer("AAPL", 4.6));
+        offers.add(new Offer("AAPL", 4.4));
+
+        Sort(bids);
+        Sort(offers);
+
+        stockData.put("AAPL", new StockData("AAPL", offers, bids));
+
+        String x = "sasdf";
+    }
+
+    void Sort(List<Stock> stocks) {
+        Collections.sort(stocks, (price1, price2) -> {
+            if (price1.getAmount() > price2.getAmount()) {
+                return 1;
+            }
+            return -1;
+        });
     }
 }
