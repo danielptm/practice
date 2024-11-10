@@ -25,14 +25,13 @@ func titleToNumber(columnTitle string) int {
 	if len(splitCol) == 1 {
 		return dmap[splitCol[0]]
 	}
-	pow := float64(len(splitCol)) - 1
+	p := len(splitCol) - 1
+	if len(splitCol) == 1 {
+		return dmap[splitCol[0]]
+	}
 	for i := 0; i < len(splitCol); i++ {
-		if i < (len(splitCol) - 1) {
-			res = res + math.Pow(float64(dmap[splitCol[i]]*26), pow)
-			pow = pow - 1
-		} else {
-			res = res + float64(dmap[splitCol[i]])
-		}
+		res = res + float64(dmap[splitCol[i]])*math.Pow(float64(26), float64(p))
+		p = p - 1
 	}
 
 	return int(res)
