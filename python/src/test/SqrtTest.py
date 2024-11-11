@@ -10,4 +10,4 @@ class SqrtTest(unittest.TestCase):
 
     def test_go(self):
         result = Sqrt().go(8)
-        self.assertEqual(2, result)
+        self.assertEqual(2, resultc )
