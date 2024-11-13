@@ -19,3 +19,7 @@ func TestRun2(t *testing.T) {
 func TestRun3(t *testing.T) {
 	run3()
 }
+
+func TestRun4(t *testing.T) {
+	run4()
+}
