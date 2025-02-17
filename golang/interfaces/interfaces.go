@@ -25,3 +25,19 @@ func Interfaces() {
 	eb := spanishBot{}
 	printGreeting(eb)
 }
+
+type TestInterface interface {
+	SayHi()
+}
+
+type Demo struct{}
+type Demo2 struct{}
+
+func (Demo) SayHi() {
+	println("hi")
+}
+
+func (dm *Demo2) SayHi() {
+	println("hi2")
+
+}

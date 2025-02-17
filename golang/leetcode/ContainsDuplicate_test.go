@@ -28,3 +28,7 @@ func TestContainsDuplicate3(t *testing.T) {
 		t.Error("error")
 	}
 }
+
+func TestMapTesting(t *testing.T) {
+	MapTesting()
+}

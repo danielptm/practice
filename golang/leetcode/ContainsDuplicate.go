@@ -16,3 +16,22 @@ func containsDuplicate(nums []int) bool {
 	}
 	return false
 }
+
+type Hi struct {
+	text string
+}
+
+func MapTesting() {
+	m := make(map[string]Hi)
+	m["1"] = Hi{text: "hi"}
+	println("*")
+	if item, exists := m["1"]; exists {
+		println(item.text)
+	}
+	for k, v := range m {
+		println(k)
+		println(v.text)
+
+	}
+
+}

@@ -23,3 +23,14 @@ func TestRun3(t *testing.T) {
 func TestRun4(t *testing.T) {
 	run4()
 }
+func TestRun5(t *testing.T) {
+	Chan1()
+}
+
+func TestRun6(t *testing.T) {
+	WaitGroup()
+}
+
+func TestMutextTest(t *testing.T) {
+	MutextTest()
+}

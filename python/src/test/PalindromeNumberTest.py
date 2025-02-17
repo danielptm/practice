@@ -3,9 +3,15 @@ from src.problems.PalindromeNumber import PalinedromeNumber
 
 class PalindromeNumberTest(unittest.TestCase):
 
+    def testIsSpecial(self):
+        pr = PalinedromeNumber()
+        x = "abcad"
+        result = pr.isSpecialSequence(x)
+        self.assertEqual("YES", result)
+
     def test_is_palindrome(self):
         pr = PalinedromeNumber()
-        x = 121
+        x = "121"
         expected = True
         result = pr.isPalindrome(x)
 
@@ -13,7 +19,7 @@ class PalindromeNumberTest(unittest.TestCase):
 
     def test_is_palindrome(self):
         pr = PalinedromeNumber()
-        x = 2222
+        x = "2222"
         expected = True
         result = pr.isPalindrome(x)
 
