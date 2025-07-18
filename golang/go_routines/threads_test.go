@@ -34,3 +34,15 @@ func TestRun6(t *testing.T) {
 func TestMutextTest(t *testing.T) {
 	MutextTest()
 }
+
+func TestSelectTest(t *testing.T) {
+	SelectTest()
+}
+
+func TestChan2(t *testing.T) {
+	Chan2()
+}
+
+func TestBufferedChannel(t *testing.T) {
+	BufferedChannel()
+}
