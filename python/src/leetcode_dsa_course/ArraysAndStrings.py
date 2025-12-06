@@ -1,4 +1,5 @@
 from typing import List
+import copy
 
 class ArraysAndStrings:
     def reverseString(self, s: List[str]) -> None:
@@ -39,5 +40,39 @@ class ArraysAndStrings:
                 curr_sum = curr_sum - nums[left]
                 left = left + 1
         return max_avg
+
+    def getCopy(self, item):
+        return copy.deepcopy(item)
+
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        new_nums = self.getCopy(nums)
+        result = 0
+        l = 0
+        r = 1
+        count = 0
+        flipped = 0
+        # l_a = []
+        while r < len(new_nums):
+            if new_nums[l] == 1 and new_nums[r] == 1:
+                count+=1
+                if count > result:
+                    result = count
+            elif new_nums[r] != 1 :
+                if flipped <= k:
+                    new_nums[r] = 1
+                    flipped = flipped+1
+                    # l_a.append(r)
+                    continue
+                else:
+                    new_nums = self.getCopy(nums)
+                    flipped = 0
+                    count = 0
+                    l +=1
+                    r = l+1
+                    continue
+            r+=1
+
+        return result
+
 
 

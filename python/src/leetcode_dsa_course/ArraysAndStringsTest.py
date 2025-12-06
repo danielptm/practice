@@ -35,3 +35,20 @@ class ArraysAndStringsTest(unittest.TestCase):
         aas = ArraysAndStrings()
         res = aas.findMaxAverage(nums, k)
         self.assertEqual(output, res)
+
+    def test_longestOnes(self):
+        nums = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
+        k = 2
+        e= 6
+        aas = ArraysAndStrings()
+        res = aas.longestOnes(nums, k)
+        self.assertEqual(e, res)
+
+    def test_longestOnes2(self):
+        nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]
+        k = 3
+        e= 10
+        aas = ArraysAndStrings()
+        res = aas.longestOnes(nums, k)
+        self.assertEqual(e, res)
+
