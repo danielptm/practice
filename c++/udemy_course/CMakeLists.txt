@@ -3,4 +3,6 @@ project(udemy_course)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(udemy_course main.cpp)
+add_executable(udemy_course main.cpp
+        Section6.cpp
+)
