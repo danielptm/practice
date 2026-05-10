@@ -3,12 +3,13 @@
 #include <iostream>
 using namespace std;
 #include "section_6/greeting.h"
+#include "section_7/course_arrays.h"
 
 string global_greet = "hello";
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
-    std::cout << sayHi() << std::endl;
+    showArrays();
     return 0;
 }
 
