@@ -3,5 +3,6 @@
 #define COURSE_ARRAYS_H
 
 void showArrays();
+void showVectors();
 
 #endif
